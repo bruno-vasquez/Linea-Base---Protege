@@ -1,99 +1,98 @@
-# Portal de Reportes PROTEGE
+# Portal PROTEGE — Sistema Multi-Instrumento
 
-## Estructura
+## Estado actual
+
+**5 municipios · 4 instrumentos · 10 reportes generados · 66 respondentes**
+
+| Municipio   | Departamento | 1a · ONGs | 1b · Gob. | 2 · Comunidad | 3 · DNA |
+|-------------|--------------|-----------|-----------|---------------|---------|
+| El Alto     | La Paz       | ✓ n=5     | ✓ n=7     | —             | —       |
+| Trinidad    | Beni         | ✓ n=2     | ✓ n=11    | ✓ n=4         | —       |
+| Cobija      | Pando        | ✓ n=1     | ✓ n=14    | ✓ n=2         | —       |
+| Concepción  | Santa Cruz   | —         | —         | —             | ✓ n=14  |
+| Boyuibe     | Santa Cruz   | —         | —         | —             | ✓ n=6   |
+
+## Estructura de archivos
 
 ```
 /mnt/user-data/outputs/
-├── index.html              ← Selector principal (municipios)
-├── el_alto.html            ← Selector de instrumentos (El Alto)
-├── trinidad.html           ← Selector de instrumentos (Trinidad)
-├── el_alto_1b.html         ← Reporte completo Pilar 1b · El Alto
-└── trinidad_1b.html        ← Reporte completo Pilar 1b · Trinidad
+├── index.html                 ← Selector principal (5 municipios)
+├── el_alto.html               ← Selector de instrumentos por municipio
+├── trinidad.html
+├── cobija.html
+├── concepcion.html
+├── boyuibe.html
+├── el_alto_1a.html            ← Reportes <slug>_<id_instrumento>.html
+├── el_alto_1b.html
+├── trinidad_1a.html
+├── trinidad_1b.html
+├── trinidad_2.html
+├── cobija_1a.html
+├── cobija_1b.html
+├── cobija_2.html
+├── concepcion_3.html
+└── boyuibe_3.html
 ```
-
-Convención de nombres: `<slug_municipio>_<id_instrumento>.html`
 
 ## Identidad visual
 
-Cada página incluye:
-- **Site header** con escudo "PROTEGE" + wordmark "unicef" (azul cyan)
-- **Bandera oficial** del municipio en el hero (SVG inline, sin imágenes externas)
-- **Footer institucional** con identidad PROTEGE × UNICEF Bolivia
+- **Header institucional** PROTEGE × UNICEF en todas las páginas
+- **5 banderas oficiales** dibujadas en SVG:
+  - **El Alto**: verde olivo + triángulo rojo (Ord. Mun. 016/89)
+  - **Trinidad**: verde + franja roja con cruz dorada (Beni)
+  - **Cobija**: 3 franjas — azul cielo + blanco + verde amazónico
+  - **Concepción**: verde selva + franja amarilla con cruz misional jesuita (Chiquitanía)
+  - **Boyuibe**: verde + amarillo + azul petróleo con 3 estrellas guaraníes (Cordillera)
+- **Paletas distintivas** por municipio
+- **5 iconos por instrumento** con colores propios (1a coral, 1b cyan, 1 morado, 2 rosa, 3 verde teal)
+- **Footer institucional** con UNICEF Bolivia
 
-Las banderas están dibujadas en SVG según las descripciones oficiales:
-- **El Alto** (Ord. Mun. 016/89): franja verde olivo con triángulo rojo izquierdo en forma de lanza
-- **Trinidad**: fondo verde oscuro, franja roja izquierda con cruz dorada con cuernos en la esquina superior
+## Pipeline de generación
 
-## Reemplazar el wordmark "unicef" con el logo oficial
-
-El wordmark actual es un placeholder tipográfico. Para usar el logo oficial:
-
-1. Edita `/home/claude/svg_assets.py`
-2. Reemplaza la variable `UNICEF_WORDMARK` con el SVG oficial
-3. Corre `python3 build_portal.py && python3 render_html.py`
-
-Si tienes el logo en PNG, reemplaza por:
-```python
-UNICEF_WORDMARK = '<img src="logo_unicef.png" style="height:22px" alt="UNICEF">'
-```
-y coloca `logo_unicef.png` junto a los HTMLs en outputs/.
-
-## Cómo agregar un municipio nuevo
-
-### 1. Generar el reporte
-
-En `/home/claude/render_html.py`, agrega el municipio al diccionario `PALETTES`:
-```python
-"Cobija": {
-    "slug": "cobija", "depto": "Pando",
-    "primary": "#2C7873", "secondary": "#6FB98F", "accent": "#A4C2A8",
-    "hero_grad": "linear-gradient(135deg,#1A4A47 0%,#2C7873 55%,#3D9E8F 100%)",
-}
-```
-Y agrégalo al loop `for muni in [...]`. Corre:
 ```bash
-cd /home/claude && python3 build_data.py && python3 render_html.py
+cd /home/claude
+python3 build_data_1b.py    # Excel 1b → JSON × 3 municipios
+python3 build_data_1a.py    # Excel 1a → JSON × 3 municipios
+python3 build_data_2.py     # Excel 2  → JSON × 2 municipios
+python3 build_data_3.py     # Excel 3  → JSON × 2 municipios
+python3 render_unified.py   # JSONs → HTML reports (auto-discovery)
+python3 build_portal.py     # Build index + selectores
 ```
 
-### 2. Añadir bandera (opcional)
+El renderer y portal builder **autodescubren** los archivos `data_*.json` disponibles, así que no hay que mantener listas manuales.
 
-En `/home/claude/svg_assets.py`, añade la bandera al diccionario `FLAGS`.
-Si no agregas, la card se verá sin imagen.
+## Análisis temático
 
-### 3. Registrar en el portal
+**0% de respuestas en "Otros"** sobre 539 respuestas abiertas categorizadas. Cada instrumento tiene su propio diccionario `THEMES` con keywords específicos:
 
-Edita `/home/claude/portal_config.json` con la nueva entrada en `municipios`.
+- **1a/1b** comparten 13 categorías temáticas (resultados, desafíos, fortalezas, etc.)
+- **2** tiene 7 categorías propias (selección de líderes, espacios seguros, etc.)
+- **3** (DNA) tiene 11 categorías específicas (tipologías de casos, dificultades operativas, etc.)
 
-### 4. Regenerar
-```bash
-cd /home/claude && python3 build_portal.py
-```
+La función `theme_classify` en `pipeline_common.py` normaliza acentos y ñ automáticamente, así que los keywords se pueden escribir sin tilde.
 
-## Agregar un instrumento nuevo (1a, 1, 2, 3) a un municipio existente
+## Cómo agregar un nuevo municipio
 
-1. Generar el HTML del reporte (ej. `el_alto_1a.html`) en `outputs/`
-2. En `portal_config.json`, añadir la entrada al municipio:
-```json
-"instrumentos_disponibles": {
-  "1b": { ... },
-  "1a": { "file": "el_alto_1a.html", "n_respondentes": 12 }
-}
-```
-3. `python3 build_portal.py`
+1. **Bandera SVG** en `/home/claude/svg_assets.py` → diccionario `FLAGS`
+2. **Paleta** en `/home/claude/build_data_1b.py` → diccionario `PALETTES`
+3. **Entrada** en `/home/claude/portal_config.json` → diccionario `municipios`
+4. Volver a correr todo el pipeline. El portal se regenera automáticamente.
 
-La card pasará automáticamente de "Próximamente" a "Disponible".
+## Cómo agregar un nuevo instrumento al sistema
 
-## Editar nombres de instrumentos
+Crear `build_data_<id>.py` siguiendo el patrón de los existentes:
+- Importar `pipeline_common` y `PALETTES` de `build_data_1b`
+- Definir `INSTRUMENT_META`, `SECTIONS`, `THEMES`
+- Función `build_municipio(muni)` que produce el JSON
+- Generar `data_<slug>_<id>.json`
 
-En `portal_config.json` → `instrumentos_catalog`, cada uno tiene `nombre`,
-`subtitle`, `descripcion`. Edita y corre `build_portal.py`.
+Añadir el catálogo del instrumento en `portal_config.json` y volver a correr `render_unified.py` + `build_portal.py`.
 
 ## Despliegue
 
-Todos los archivos son estáticos sin dependencias externas (Chart.js empotrado,
-SVGs inline). Súbelos como una carpeta a:
-- GitHub Pages
+Todos los archivos son estáticos y autocontenidos (Chart.js empotrado, SVGs inline). Para desplegar:
+- GitHub Pages (push de la carpeta `outputs/`)
 - Netlify (drag-and-drop)
-- Cualquier servidor web (Apache, Nginx, S3)
+- Cualquier servidor web
 
-El `index.html` sirve como landing page.
+`index.html` es el punto de entrada.

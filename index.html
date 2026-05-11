@@ -26,6 +26,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
 .brand-right{display:flex;align-items:center;gap:14px}
 .unicef-mark{width:74px;height:22px}
 .unicef-mark svg{width:100%;height:100%;display:block}
+.unicef-logo-img{height:38px;width:auto;border-radius:6px;display:block;object-fit:contain;box-shadow:0 2px 8px rgba(28,171,226,0.18)}
 .brand-country{font-size:10px;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase;font-weight:700;border-left:1px solid var(--border);padding-left:14px}
 
 /* BREADCRUMB */
@@ -140,10 +141,7 @@ footer strong{color:var(--P)}
     </div>
   </div>
   <div class="brand-right">
-    <div class="unicef-mark"><svg viewBox="0 0 90 26" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid meet">
-  <text x="0" y="20" font-family="'DM Sans', Arial, sans-serif" font-weight="700" font-size="22" fill="#1CABE2" letter-spacing="-0.6">unicef</text>
-  <text x="0" y="20" font-family="'DM Sans', Arial, sans-serif" font-weight="700" font-size="22" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="0.5" letter-spacing="-0.6">unicef</text>
-</svg></div>
+    <img class="unicef-logo-img" src="unicef_logo.png" alt="UNICEF">
     <div class="brand-country">Bolivia</div>
   </div>
 </header>
@@ -159,11 +157,11 @@ footer strong{color:var(--P)}
   <div class="hero-content">
     <div class="hero-eyebrow">UNICEF Bolivia</div>
     <h1>PROTEGE</h1>
-    <div class="hero-sub">Sistema de Reportes Municipales de Protección a la Niñez y Adolescencia</div>
+    <div class="hero-sub">Línea Base - Sistema de Reportes Municipales de Protección a la Niñez y Adolescencia</div>
     <div class="hero-pills">
-      <span class="hero-pill">3 municipios</span>
-      <span class="hero-pill">5 instrumentos del marco</span>
-      <span class="hero-pill">3 reportes disponibles</span>
+      <span class="hero-pill">5 municipios</span>
+      <span class="hero-pill">4 instrumentos del marco</span>
+      <span class="hero-pill">10 reportes disponibles</span>
     </div>
   </div>
 </div>
@@ -177,21 +175,21 @@ footer strong{color:var(--P)}
     <div class="pstat-item">
       <div class="pstat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-7.5 8-13a8 8 0 10-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg></div>
       <div class="pstat-block">
-        <div class="pstat-num">3</div>
+        <div class="pstat-num">5</div>
         <div class="pstat-lbl">Municipios</div>
       </div>
     </div>
     <div class="pstat-item">
       <div class="pstat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1.5c0-2.5 2-4.5 4.5-4.5h3c2.5 0 4.5 2 4.5 4.5V20"/><path d="M14 18v-1c0-2 1.5-3.5 3.5-3.5h0c2 0 3.5 1.5 3.5 3.5v1"/></svg></div>
       <div class="pstat-block">
-        <div class="pstat-num">32</div>
+        <div class="pstat-num">66</div>
         <div class="pstat-lbl">Respondentes</div>
       </div>
     </div>
     <div class="pstat-item">
       <div class="pstat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></div>
       <div class="pstat-block">
-        <div class="pstat-num">3</div>
+        <div class="pstat-num">10</div>
         <div class="pstat-lbl">Reportes</div>
       </div>
     </div>
@@ -217,15 +215,15 @@ footer strong{color:var(--P)}
             <div class="muni-stat-row">
               <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1.5c0-2.5 2-4.5 4.5-4.5h3c2.5 0 4.5 2 4.5 4.5V20"/><path d="M14 18v-1c0-2 1.5-3.5 3.5-3.5h0c2 0 3.5 1.5 3.5 3.5v1"/></svg></div>
               <div class="muni-stat-text">
-                <span class="muni-stat-num">7</span>
+                <span class="muni-stat-num">12</span>
                 <span class="muni-stat-lbl">respondentes</span>
               </div>
             </div>
             <div class="muni-stat-row">
               <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></div>
               <div class="muni-stat-text">
-                <span class="muni-stat-num">1<span class="muni-of">/5</span></span>
-                <span class="muni-stat-lbl">instrumento disponible</span>
+                <span class="muni-stat-num">2<span class="muni-of">/4</span></span>
+                <span class="muni-stat-lbl">instrumentos disponibles</span>
               </div>
             </div>
           </div>
@@ -260,15 +258,15 @@ footer strong{color:var(--P)}
             <div class="muni-stat-row">
               <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1.5c0-2.5 2-4.5 4.5-4.5h3c2.5 0 4.5 2 4.5 4.5V20"/><path d="M14 18v-1c0-2 1.5-3.5 3.5-3.5h0c2 0 3.5 1.5 3.5 3.5v1"/></svg></div>
               <div class="muni-stat-text">
-                <span class="muni-stat-num">11</span>
+                <span class="muni-stat-num">17</span>
                 <span class="muni-stat-lbl">respondentes</span>
               </div>
             </div>
             <div class="muni-stat-row">
               <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></div>
               <div class="muni-stat-text">
-                <span class="muni-stat-num">1<span class="muni-of">/5</span></span>
-                <span class="muni-stat-lbl">instrumento disponible</span>
+                <span class="muni-stat-num">3<span class="muni-of">/4</span></span>
+                <span class="muni-stat-lbl">instrumentos disponibles</span>
               </div>
             </div>
           </div>
@@ -296,6 +294,45 @@ footer strong{color:var(--P)}
             <div class="muni-stat-row">
               <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1.5c0-2.5 2-4.5 4.5-4.5h3c2.5 0 4.5 2 4.5 4.5V20"/><path d="M14 18v-1c0-2 1.5-3.5 3.5-3.5h0c2 0 3.5 1.5 3.5 3.5v1"/></svg></div>
               <div class="muni-stat-text">
+                <span class="muni-stat-num">17</span>
+                <span class="muni-stat-lbl">respondentes</span>
+              </div>
+            </div>
+            <div class="muni-stat-row">
+              <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></div>
+              <div class="muni-stat-text">
+                <span class="muni-stat-num">3<span class="muni-of">/4</span></span>
+                <span class="muni-stat-lbl">instrumentos disponibles</span>
+              </div>
+            </div>
+          </div>
+          <div class="muni-cta">
+            <span>Ver reportes</span>
+            <span class="muni-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </a>
+        <a href="concepcion.html" class="muni-card" style="--MP:#2C7A4F;--MS:#D4A017">
+          <div class="muni-stripe"></div>
+          <div class="muni-flag-area">
+            <div class="muni-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <rect width="60" height="40" fill="#2C7A4F"/>
+  <rect x="0" y="14" width="60" height="12" fill="#F4C430"/>
+  <g transform="translate(30,20)" fill="#FFFFFF" stroke="#8B6914" stroke-width="0.15">
+    <rect x="-1.4" y="-5.5" width="2.8" height="11" rx="0.3"/>
+    <rect x="-4.5" y="-1.4" width="9" height="2.8" rx="0.3"/>
+  </g>
+  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/>
+</svg></div>
+            <div class="muni-name-block">
+              <div class="muni-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-7.5 8-13a8 8 0 10-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg> Santa Cruz</div>
+              <h3 class="muni-name">Concepción</h3>
+            </div>
+          </div>
+          <div class="muni-divider"></div>
+          <div class="muni-stats">
+            <div class="muni-stat-row">
+              <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1.5c0-2.5 2-4.5 4.5-4.5h3c2.5 0 4.5 2 4.5 4.5V20"/><path d="M14 18v-1c0-2 1.5-3.5 3.5-3.5h0c2 0 3.5 1.5 3.5 3.5v1"/></svg></div>
+              <div class="muni-stat-text">
                 <span class="muni-stat-num">14</span>
                 <span class="muni-stat-lbl">respondentes</span>
               </div>
@@ -303,7 +340,48 @@ footer strong{color:var(--P)}
             <div class="muni-stat-row">
               <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></div>
               <div class="muni-stat-text">
-                <span class="muni-stat-num">1<span class="muni-of">/5</span></span>
+                <span class="muni-stat-num">1<span class="muni-of">/4</span></span>
+                <span class="muni-stat-lbl">instrumento disponible</span>
+              </div>
+            </div>
+          </div>
+          <div class="muni-cta">
+            <span>Ver reportes</span>
+            <span class="muni-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </a>
+        <a href="boyuibe.html" class="muni-card" style="--MP:#1B7A47;--MS:#1F4D5C">
+          <div class="muni-stripe"></div>
+          <div class="muni-flag-area">
+            <div class="muni-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <rect width="60" height="13.33" y="0" fill="#1B7A47"/>
+  <rect width="60" height="13.34" y="13.33" fill="#F4C430"/>
+  <rect width="60" height="13.33" y="26.67" fill="#1F4D5C"/>
+  <g fill="#E8B800">
+    <polygon points="15,7 15.6,8.5 17.2,8.5 16,9.4 16.4,11 15,10.1 13.6,11 14,9.4 12.8,8.5 14.4,8.5"/>
+    <polygon points="45,7 45.6,8.5 47.2,8.5 46,9.4 46.4,11 45,10.1 43.6,11 44,9.4 42.8,8.5 44.4,8.5"/>
+    <polygon points="30,32 30.7,33.7 32.5,33.7 31.1,34.7 31.6,36.4 30,35.4 28.4,36.4 28.9,34.7 27.5,33.7 29.3,33.7"/>
+  </g>
+  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/>
+</svg></div>
+            <div class="muni-name-block">
+              <div class="muni-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-7.5 8-13a8 8 0 10-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg> Santa Cruz</div>
+              <h3 class="muni-name">Boyuibe</h3>
+            </div>
+          </div>
+          <div class="muni-divider"></div>
+          <div class="muni-stats">
+            <div class="muni-stat-row">
+              <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1.5c0-2.5 2-4.5 4.5-4.5h3c2.5 0 4.5 2 4.5 4.5V20"/><path d="M14 18v-1c0-2 1.5-3.5 3.5-3.5h0c2 0 3.5 1.5 3.5 3.5v1"/></svg></div>
+              <div class="muni-stat-text">
+                <span class="muni-stat-num">6</span>
+                <span class="muni-stat-lbl">respondentes</span>
+              </div>
+            </div>
+            <div class="muni-stat-row">
+              <div class="muni-stat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></div>
+              <div class="muni-stat-text">
+                <span class="muni-stat-num">1<span class="muni-of">/4</span></span>
                 <span class="muni-stat-lbl">instrumento disponible</span>
               </div>
             </div>
