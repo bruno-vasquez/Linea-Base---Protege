@@ -83,7 +83,12 @@ footer strong{color:var(--P)}
 }
 
 
-.muni-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px;max-width:1400px}
+.muni-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(380px,1fr));
+  gap:24px;
+  max-width:1400px;
+}
 .muni-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .25s ease, box-shadow .25s ease;position:relative}
 .muni-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(0,0,0,.12)}
 .muni-stripe{height:10px;background:linear-gradient(90deg,var(--MP),var(--MS),var(--MP))}
@@ -93,7 +98,15 @@ footer strong{color:var(--P)}
 .muni-name-block{flex:1;min-width:0}
 .muni-eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:5px}
 .muni-eyebrow svg{width:11px;height:11px}
-.muni-name{font-family:'Fraunces',serif;font-size:34px;color:var(--MP);line-height:1;font-weight:900}
+.muni-name{
+  font-family:'Fraunces',serif;
+  font-size:30px;
+  color:var(--MP);
+  line-height:1.05;
+  font-weight:900;
+  white-space:normal;
+  overflow-wrap:break-word;
+}
 .muni-divider{height:1px;background:var(--border);margin:0 24px}
 .muni-stats{display:flex;flex-direction:column;gap:10px;padding:18px 24px 8px}
 .muni-stat-row{display:flex;align-items:center;gap:12px}
