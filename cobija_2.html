@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -458,7 +458,7 @@ function legHtml(cats, vals, useCatColors=true) {
   return '<div class="legend">'+cats.map((c,i)=>{
     const color = useCatColors ? (CAT_COLORS[c]||PRIMARY) : THEME_PALETTE[i % THEME_PALETTE.length];
     return `<div class="leg-item"><div class="leg-swatch" style="background:${color}"></div>
-      <strong>${c}</strong>:&nbsp;${vals[i]}&nbsp;(${Math.round(vals[i]/tot*100)}%)</div>`;
+      <strong>${c}</strong>:&nbsp;(${Math.round(vals[i]/tot*100)}%)</div>`;
   }).join('')+'</div>';
 }
 
@@ -490,12 +490,11 @@ function cardCat(q) {
     return `<div class="card">
       <div class="card-num">Preg. ${q.num}</div>
       <div class="card-q">${q.title}</div>
-      <div class="card-meta">n = ${q.n} respondentes</div>
       <div class="stat-inner">
         <div class="stat-ring">
           <div class="num">${pct}</div><div class="sym">%</div>
         </div>
-        <div class="stat-desc">${vals[0]} de ${q.n} respondentes&nbsp;→&nbsp;<strong>${cats[0]}</strong></div>
+        <div class="stat-desc"><strong>${cats[0]}</strong></div>
       </div>
     </div>`;
   }
@@ -504,7 +503,6 @@ function cardCat(q) {
     return `<div class="card">
       <div class="card-num">Preg. ${q.num}</div>
       <div class="card-q">${q.title}</div>
-      <div class="card-meta">n = ${q.n} respondentes</div>
       <div class="chart-area h180 center-chart"><canvas id="${id}"></canvas></div>
       ${legHtml(cats, vals)}
     </div>`;
@@ -514,7 +512,6 @@ function cardCat(q) {
     return `<div class="card">
       <div class="card-num">Preg. ${q.num}</div>
       <div class="card-q">${q.title}</div>
-      <div class="card-meta">n = ${q.n} respondentes</div>
       <div class="chart-area h180 center-chart"><canvas id="${id}"></canvas></div>
       ${legHtml(cats, vals)}
     </div>`;
@@ -524,7 +521,6 @@ function cardCat(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">n = ${q.n} respondentes</div>
     <div class="chart-area" style="height:${hpx}px"><canvas id="${id}"></canvas></div>
     ${legHtml(cats, vals)}
   </div>`;
@@ -541,7 +537,6 @@ function cardMulti(q) {
   return `<div class="card span_full">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">Selección múltiple · ${q.n} respondentes · ${cats.length} opciones identificadas</div>
     <div class="chart-area" style="height:${hpx}px"><canvas id="${id}"></canvas></div>
   </div>`;
 }
@@ -555,7 +550,6 @@ function cardTheme(q) {
   return `<div class="card span_full">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">Análisis temático cualitativo · ${q.n} respuestas categorizadas en ${cats.length} temas</div>
     <div class="chart-area" style="height:${hpx}px"><canvas id="${id}"></canvas></div>
   </div>`;
 }
@@ -620,7 +614,6 @@ function cardNumSimple(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">n = ${q.n} respondentes · suma total: ${fmtNum(q.total)}</div>
     <div class="numeric-grid">
       <div class="num-block"><div class="num-label">Promedio</div><div class="num-big">${fmtNum(q.avg)}</div><div class="num-unit">${unit}</div></div>
       <div class="num-block"><div class="num-label">Mínimo</div><div class="num-big">${fmtNum(q.min)}</div><div class="num-unit">${unit}</div></div>
@@ -630,7 +623,7 @@ function cardNumSimple(q) {
 }
 
 function cardTagList(q) {
-  if (!q.items || !q.items.length) return emptyCard(q.num, q.title, 'Ningún respondente especificó');
+  if (!q.items || !q.items.length) return emptyCard(q.num, q.title, 'Sin especificar');
   const tags = q.items.map(i => `<div class="tag">${i}</div>`).join('');
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
@@ -733,3 +726,5 @@ window.addEventListener('scroll', () => {
 </script>
 </body>
 </html>
+
+
