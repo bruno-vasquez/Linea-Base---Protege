@@ -22,9 +22,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --P:#2C7A4F;
-  --S:#D4A017;
-  --A:#5499C9;
+  --P:#145A32;
+  --S:#1E7A45;
+  --A:#C9A82A;
   --bg:#F8F7F4;
   --card:#FFFFFF;
   --border:#E4E1DB;
@@ -52,7 +52,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
 .breadcrumb .sep{color:#C9C5BD;font-weight:400}
 .breadcrumb .current{color:var(--text);font-weight:500}
 
-.hero{background:linear-gradient(135deg,#1A4D2E 0%,#2C7A4F 50%,#5BA678 80%,#D4A017 100%);color:#fff;padding:56px 60px 48px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#0A3820 0%,#145A32 55%,#1D7040 100%);color:#fff;padding:56px 60px 48px;position:relative;overflow:hidden}
 .hero-deco{position:absolute;border-radius:50%;border:50px solid rgba(255,255,255,0.05)}
 .hero-deco.d1{width:400px;height:400px;top:-100px;right:-80px}
 .hero-deco.d2{width:260px;height:260px;bottom:-60px;left:35%}
@@ -168,7 +168,60 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
   .summary-section,.section,.footer,.breadcrumb{padding-left:24px;padding-right:24px}
   .nav{padding:0 24px}
 }
-</style>
+
+/* ── UNICEF PROFESSIONAL ENHANCEMENTS ───────────────────────────── */
+html{scroll-behavior:smooth}
+body{background:linear-gradient(175deg,#EBF3F9 0%,#F8F7F4 320px)}
+
+.site-header{border-top:3px solid #1CABE2;padding-top:9px;box-shadow:0 2px 16px rgba(0,0,0,.07)}
+
+.hero-pill{background:rgba(28,171,226,.25);border-color:rgba(28,171,226,.5)}
+.hero h1{text-shadow:0 2px 16px rgba(0,0,0,.20)}
+
+.summary-section{background:linear-gradient(135deg,#0B2E47 0%,#154360 60%,#1A5A88 100%);border-bottom:none;position:relative;overflow:hidden}
+.summary-section::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1CABE2,rgba(28,171,226,0))}
+.summary-title{color:rgba(255,255,255,.55);letter-spacing:4px}
+.sum-card{border-right-color:rgba(255,255,255,.12)}
+.sum-pct{color:#1CABE2;font-size:38px}
+.sum-pct sub{color:rgba(28,171,226,.8)}
+.sum-q{color:rgba(255,255,255,.82);font-size:11px}
+.sum-n{color:rgba(255,255,255,.35);font-size:9.5px}
+
+.sec-header{background:linear-gradient(135deg,rgba(28,171,226,.07) 0%,transparent 100%);border-bottom:none;border-left:4px solid #1CABE2;border-radius:0 10px 10px 0;padding:14px 20px 14px 22px}
+.sec-roman{color:#1CABE2;font-size:32px}
+.sec-title-text h2{font-size:20px}
+
+.card{border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.04),0 2px 12px rgba(0,0,0,.04);overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 36px rgba(0,0,0,.10),0 2px 8px rgba(0,0,0,.05);border-color:rgba(28,171,226,.35)}
+.card-num{background:linear-gradient(135deg,#EBF3F9,#D6E9F5);color:var(--P);padding:3px 10px;border-radius:20px;font-size:9px;letter-spacing:2px;display:inline-block;margin-bottom:7px;font-weight:700}
+.card-q{font-size:13.5px;font-weight:600}
+.card-meta{font-size:11px;color:var(--muted);margin-bottom:14px;padding-bottom:10px;border-bottom:1px dashed rgba(0,0,0,.08)}
+
+.legend{gap:8px;margin-top:14px;padding-top:12px}
+.leg-item{background:rgba(0,0,0,.03);padding:4px 12px;border-radius:20px;border:1px solid rgba(0,0,0,.07);font-size:11px;font-weight:500;color:var(--text)}
+.leg-swatch{width:8px;height:8px;border-radius:50%}
+
+.stat-ring{box-shadow:0 0 0 4px rgba(21,67,96,.08),0 4px 20px rgba(0,0,0,.10);background:radial-gradient(circle,#fff 62%,rgba(21,67,96,.05))}
+.stat-ring .num{font-size:38px}
+
+.num-block{background:linear-gradient(135deg,#EEF5FA,#fff);border-color:rgba(21,67,96,.12);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.num-big{font-size:30px}
+
+.tag-item{background:linear-gradient(135deg,#EBF3F9,#D6E9F5)!important;color:var(--P)!important;border:1px solid rgba(21,67,96,.18)!important;font-weight:600!important;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+
+.cov-stat{color:var(--P);font-size:20px}
+
+.pers-v{background:linear-gradient(135deg,rgba(84,153,201,.14),rgba(84,153,201,.05))}
+.pers-m{background:linear-gradient(135deg,rgba(155,35,53,.12),rgba(155,35,53,.04))}
+.pers-t{background:linear-gradient(135deg,var(--P),#1A6090)}
+.pers-num{font-size:28px}
+
+.grid{gap:20px}
+
+.footer{background:linear-gradient(135deg,#0B2E47,#154360);color:rgba(255,255,255,.62);border-top:none;margin-top:64px}
+.footer strong{color:#1CABE2}
+.footer .foot-brand svg{opacity:.85}
+/* ──────────────────────────────────────────────────────────────── */</style>
 </head>
 <body>
 
@@ -213,14 +266,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
   <div class="hero-deco d3"></div>
   <div class="hero-flag-wrap">
     <div class="hero-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-  <rect width="60" height="40" fill="#2C7A4F"/>
-  <rect x="0" y="14" width="60" height="12" fill="#F4C430"/>
-  <g transform="translate(30,20)" fill="#FFFFFF" stroke="#8B6914" stroke-width="0.15">
-    <rect x="-1.4" y="-5.5" width="2.8" height="11" rx="0.3"/>
-    <rect x="-4.5" y="-1.4" width="9" height="2.8" rx="0.3"/>
-  </g>
-  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/>
-</svg></div>
+  <rect width="60" height="40" fill="#145A32"/>
+  <rect x="0" y="13.33" width="60" height="13.34" fill="#C9A82A"/>
+  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/></svg></div>
     <div class="hero-flag-lbl">Bandera oficial</div>
   </div>
   <div class="hero-content">
@@ -228,7 +276,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
     <h1>Concepción</h1>
     <div class="hero-instrument">Diagnóstico Operativo de las DNA</div>
     <div class="hero-pills">
-      <span class="hero-pill">n = 14 respondentes</span>
+      <span class="hero-pill">n = 14 Encuestados</span>
       <span class="hero-pill">Defensorías de la Niñez y Adolescencia</span>
       <span class="hero-pill">28 preguntas · 8 secciones</span>
     </div>
@@ -269,7 +317,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
 </div>
 
 <script>
-const D = {"muni": "Concepción", "slug": "concepcion", "depto": "Santa Cruz", "n": 14, "palette": {"primary": "#2C7A4F", "secondary": "#D4A017", "accent": "#5499C9", "hero_grad": "linear-gradient(135deg,#1A4D2E 0%,#2C7A4F 50%,#5BA678 80%,#D4A017 100%)"}, "instrument": {"id": "3", "name": "Instrumento Pilar 3", "subtitle": "Defensorías de la Niñez y Adolescencia", "eyebrow": "Instrumento Pilar 3 DNA", "hero_subtitle": "Diagnóstico Operativo de las DNA", "count_label": "28 preguntas"}, "questions": {"1": {"type": "num_simple", "num": "1", "title": "¿Cuántas personas componen el equipo actual de DNA?", "unit": "personas", "n": 5, "values": [4.0, 4.0, 4.0, 4.0, 8.0], "avg": 4.8, "min": 4.0, "max": 8.0, "median": 4.0, "total": 24.0}, "2": {"type": "multi", "num": "2", "title": "¿Por quiénes está compuesto el equipo de DNA?", "categories": ["Trabajadora Social", "Psicólogo", "Abogado", "Pasante"], "values": [5, 5, 5, 2, 2], "n": 5}, "3": {"type": "multi", "num": "3", "title": "Modalidades de atención del servicio de DNA", "categories": ["Atención continua", "Se realizan atención móvil", "La atención se encuentra fusionada con SLIM"], "values": [5, 5, 5], "n": 5}, "4": {"type": "theme", "num": "4", "title": "Las 2 principales dificultades para realizar la atención de casos", "categories": ["Falta de talleres y materiales", "Falta de transporte / Logística", "Falta de apoyo institucional"], "values": [12, 1, 1], "n": 14}, "5": {"type": "cat", "num": "5", "title": "¿La DNA cuenta con resolución municipal?", "categories": ["SI", "NO"], "values": [1, 4], "n": 5}, "6": {"type": "cat", "num": "6", "title": "¿Se realizan procesos de selección de personal para los equipos interdisciplinarios?", "categories": ["SI"], "values": [5], "n": 5}, "7": {"type": "theme", "num": "7", "title": "¿Quién realiza el proceso de selección?", "categories": ["Alcaldesa / Autoridad municipal"], "values": [6], "n": 6}, "8": {"type": "matrix", "num": "8", "title": "Modalidad de contratación del personal", "items": [{"label": "¿Se realizan contratos de consultores en Línea?", "categories": ["SI"], "values": [6], "n": 6}, {"label": "¿Se realizan contratos directos?", "categories": ["SI", "NO"], "values": [1, 5], "n": 6}, {"label": "¿Se asignan Ítems?", "categories": ["NO"], "values": [6], "n": 6}, {"label": "¿Existen voluntarios o pasantes?", "categories": ["SI", "NO"], "values": [5, 1], "n": 6}]}, "8.1": {"type": "tag_list", "num": "8.1", "title": "Otras modalidades de contratación (especificar)", "items": ["Secretaria"], "n": 4}, "8.1.1": {"type": "num_simple", "num": "8.1.1", "title": "N° de Consultores en línea", "unit": "consultores", "n": 4, "values": [6.0, 6.0, 6.0, 6.0], "avg": 6.0, "min": 6.0, "max": 6.0, "median": 6.0, "total": 24.0}, "8.1.2": {"type": "num_simple", "num": "8.1.2", "title": "N° de Contratos directos", "unit": "contratos", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "8.1.3": {"type": "num_simple", "num": "8.1.3", "title": "N° de Ítems asignados", "unit": "ítems", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "8.1.4": {"type": "num_simple", "num": "8.1.4", "title": "N° de Voluntarios o pasantes", "unit": "personas", "n": 4, "values": [1.0, 1.0, 1.0, 1.0], "avg": 1.0, "min": 1.0, "max": 1.0, "median": 1.0, "total": 4.0}, "9": {"type": "cat", "num": "9", "title": "¿Se cuenta con predios o ambientes propios e independientes?", "categories": ["SI"], "values": [6], "n": 6}, "10": {"type": "cat", "num": "10", "title": "¿Los ambientes son compartidos con otras organizaciones?", "categories": ["NO"], "values": [5], "n": 5}, "11": {"type": "cat", "num": "11", "title": "¿La DNA utiliza algún sistema o protocolo de atención?", "categories": ["NO"], "values": [5], "n": 5}, "12": {"type": "multi", "num": "12", "title": "Modalidad de registro de casos, remisión y coordinación", "categories": ["Sistema manuscrito", "Sistema propio (Excel/Programa)"], "values": [5, 2], "n": 5}, "13": {"type": "theme", "num": "13", "title": "Principales necesidades de la DNA relacionadas con su funcionamiento", "categories": ["Más capacitación al personal"], "values": [4], "n": 4}, "14": {"type": "tag_list", "num": "14", "title": "Presupuesto asignado para la DNA", "items": ["300000"], "n": 5}, "15": {"type": "theme", "num": "15", "title": "¿Cómo se define el presupuesto designado para la DNA?", "categories": ["De acuerdo al trabajo / Casos", "Por asistencia familiar y conflictos", "Por monto fijo / Porcentaje", "Garantizan apoyo"], "values": [2, 1, 1, 1], "n": 5}, "16": {"type": "theme", "num": "16", "title": "¿Cuál es el proceso de ejecución presupuestaria?", "categories": ["90-93% de ejecución"], "values": [5], "n": 5}, "17": {"type": "multi", "num": "17", "title": "Fuentes de financiamiento del servicio de DNA", "categories": ["Municipales propias"], "values": [6], "n": 6}, "18": {"type": "cat", "num": "18", "title": "¿El presupuesto designado se encuentra acorde a las necesidades de las Defensorías?", "categories": ["NO"], "values": [5], "n": 5}, "19.1": {"type": "num_simple", "num": "19.1", "title": "Casos atendidos en promedio por DÍA", "unit": "casos/día", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "19.2": {"type": "num_simple", "num": "19.2", "title": "Casos atendidos en promedio por MES", "unit": "casos/mes", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "19.3": {"type": "num_simple", "num": "19.3", "title": "Casos atendidos en promedio por AÑO", "unit": "casos/año", "n": 1, "values": [1000.0], "avg": 1000.0, "min": 1000.0, "max": 1000.0, "median": 1000.0, "total": 1000.0}, "20": {"type": "theme", "num": "20", "title": "3 tipologías prevalentes en la atención de casos", "categories": ["Asistencia familiar", "Conflictos de guarda y tutela", "Violencia psicológica", "Machismo / Desigualdad de género"], "values": [6, 5, 1, 1], "n": 13}, "22.1": {"type": "num_simple", "num": "22.1", "title": "N° de casos en procesos judiciales", "unit": "casos", "n": 1, "values": [87.0], "avg": 87.0, "min": 87.0, "max": 87.0, "median": 87.0, "total": 87.0}, "22.2": {"type": "num_simple", "num": "22.2", "title": "N° de casos en proceso de conclusión", "unit": "casos", "n": 1, "values": [42.0], "avg": 42.0, "min": 42.0, "max": 42.0, "median": 42.0, "total": 42.0}, "22.3": {"type": "num_simple", "num": "22.3", "title": "N° de casos con resolución judicial / cierre", "unit": "casos", "n": 1, "values": [1.0], "avg": 1.0, "min": 1.0, "max": 1.0, "median": 1.0, "total": 1.0}, "21": {"type": "theme", "num": "21", "title": "Desafíos u obstáculos que enfrenta la DNA", "categories": ["Familias normalizan la violencia", "Familias no apoyan / Obstaculizan", "Falta de orientación y concientización", "Embarazos en adolescentes", "Cobertura territorial limitada", "Mujeres callan / Silencio social"], "values": [4, 2, 3, 1, 1, 1], "n": 12}, "23": {"type": "cat", "num": "23", "title": "¿Considera que la DNA cumple con su misión como instancia protectora?", "categories": ["SI"], "values": [5], "n": 5}, "24": {"type": "theme", "num": "24", "title": "Acciones sugeridas para que la DNA lleve a cabo su rol de manera óptima", "categories": ["Equipos de prevención comunitaria", "Más talleres y capacitaciones", "Integración familiar"], "values": [5, 8, 1], "n": 14}, "25": {"type": "cat", "num": "25", "title": "¿La DNA desarrolla o implementa acciones o estrategias de prevención?", "categories": ["SI"], "values": [6], "n": 6}, "25.1": {"type": "theme", "num": "25.1", "title": "¿Cuáles son estas acciones de prevención?", "categories": ["Talleres en Unidades Educativas", "Capacitación y talleres generales"], "values": [1, 5], "n": 6}, "26": {"type": "cat", "num": "26", "title": "¿La DNA participa de reuniones interinstitucionales o REDES?", "categories": ["SI"], "values": [6], "n": 6}, "26.1": {"type": "cat", "num": "26.1", "title": "¿Con qué frecuencia participa en reuniones?", "categories": ["CUANDO HAY CASOS", "CADA QUE HAY CASOS", "CUANDO SE PRESENTAN CASOS", "PROCURAMOS REUNIRNOS SEGUIDO PARA MANTENER ESA LINEA DE PREVENCIÓN"], "values": [3, 1, 1, 1], "n": 6}, "27": {"type": "multi", "num": "27", "title": "Organizaciones con las que se realiza coordinación", "categories": ["Unidades Educativas / Distritales", "Policía Nacional", "Organizaciones Sociales"], "values": [6, 6, 6], "n": 6}, "28": {"type": "theme", "num": "28", "title": "¿Cómo definiría la coordinación con las organizaciones mencionadas?", "categories": ["Muy buena", "Buena"], "values": [4, 10], "n": 14}}, 
+const D = {"muni": "Concepción", "slug": "concepcion", "depto": "Santa Cruz", "n": 14, "palette": {"primary": "#145A32", "secondary": "#1E7A45", "accent": "#C9A82A", "hero_grad": "linear-gradient(135deg,#0A3820 0%,#145A32 55%,#1D7040 100%)"}, "instrument": {"id": "3", "name": "Instrumento Pilar 3", "subtitle": "Defensorías de la Niñez y Adolescencia", "eyebrow": "Instrumento Pilar 3 DNA", "hero_subtitle": "Diagnóstico Operativo de las DNA", "count_label": "28 preguntas"}, "questions": {"1": {"type": "num_simple", "num": "1", "title": "¿Cuántas personas componen el equipo actual de DNA?", "unit": "personas", "n": 5, "values": [4.0, 4.0, 4.0, 4.0, 8.0], "avg": 4.8, "min": 4.0, "max": 8.0, "median": 4.0, "total": 24.0}, "2": {"type": "multi", "num": "2", "title": "¿Por quiénes está compuesto el equipo de DNA?", "categories": ["Trabajadora Social", "Psicólogo", "Abogado", "Pasante"], "values": [5, 5, 5, 2, 2], "n": 5}, "3": {"type": "multi", "num": "3", "title": "Modalidades de atención del servicio de DNA", "categories": ["Atención continua", "Se realizan atención móvil", "La atención se encuentra fusionada con SLIM"], "values": [5, 5, 5], "n": 5}, "4": {"type": "theme", "num": "4", "title": "Las 2 principales dificultades para realizar la atención de casos", "categories": ["Falta de talleres y materiales", "Falta de transporte / Logística", "Falta de apoyo institucional"], "values": [12, 1, 1], "n": 14}, "5": {"type": "cat", "num": "5", "title": "¿La DNA cuenta con resolución municipal?", "categories": ["SI", "NO"], "values": [1, 4], "n": 5}, "6": {"type": "cat", "num": "6", "title": "¿Se realizan procesos de selección de personal para los equipos interdisciplinarios?", "categories": ["SI"], "values": [5], "n": 5}, "7": {"type": "theme", "num": "7", "title": "¿Quién realiza el proceso de selección?", "categories": ["Alcaldesa / Autoridad municipal"], "values": [6], "n": 6}, "8": {"type": "matrix", "num": "8", "title": "Modalidad de contratación del personal", "items": [{"label": "¿Se realizan contratos de consultores en Línea?", "categories": ["SI"], "values": [6], "n": 6}, {"label": "¿Se realizan contratos directos?", "categories": ["SI", "NO"], "values": [1, 5], "n": 6}, {"label": "¿Se asignan Ítems?", "categories": ["NO"], "values": [6], "n": 6}, {"label": "¿Existen voluntarios o pasantes?", "categories": ["SI", "NO"], "values": [5, 1], "n": 6}]}, "8.1": {"type": "tag_list", "num": "8.1", "title": "Otras modalidades de contratación (especificar)", "items": ["Secretaria"], "n": 4}, "8.1.1": {"type": "num_simple", "num": "8.1.1", "title": "N° de Consultores en línea", "unit": "consultores", "n": 4, "values": [6.0, 6.0, 6.0, 6.0], "avg": 6.0, "min": 6.0, "max": 6.0, "median": 6.0, "total": 24.0}, "8.1.2": {"type": "num_simple", "num": "8.1.2", "title": "N° de Contratos directos", "unit": "contratos", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "8.1.3": {"type": "num_simple", "num": "8.1.3", "title": "N° de Ítems asignados", "unit": "ítems", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "8.1.4": {"type": "num_simple", "num": "8.1.4", "title": "N° de Voluntarios o pasantes", "unit": "personas", "n": 4, "values": [1.0, 1.0, 1.0, 1.0], "avg": 1.0, "min": 1.0, "max": 1.0, "median": 1.0, "total": 4.0}, "9": {"type": "cat", "num": "9", "title": "¿Se cuenta con predios o ambientes propios e independientes?", "categories": ["SI"], "values": [6], "n": 6}, "10": {"type": "cat", "num": "10", "title": "¿Los ambientes son compartidos con otras organizaciones?", "categories": ["NO"], "values": [5], "n": 5}, "11": {"type": "cat", "num": "11", "title": "¿La DNA utiliza algún sistema o protocolo de atención?", "categories": ["NO"], "values": [5], "n": 5}, "12": {"type": "multi", "num": "12", "title": "Modalidad de registro de casos, remisión y coordinación", "categories": ["Sistema manuscrito", "Sistema propio (Excel/Programa)"], "values": [5, 2], "n": 5}, "13": {"type": "theme", "num": "13", "title": "Principales necesidades de la DNA relacionadas con su funcionamiento", "categories": ["Más capacitación al personal"], "values": [4], "n": 4}, "14": {"type": "tag_list", "num": "14", "title": "Presupuesto asignado para la DNA", "items": ["300000"], "n": 5}, "15": {"type": "theme", "num": "15", "title": "¿Cómo se define el presupuesto designado para la DNA?", "categories": ["De acuerdo al trabajo / Casos", "Por asistencia familiar y conflictos", "Por monto fijo / Porcentaje", "Garantizan apoyo"], "values": [2, 1, 1, 1], "n": 5}, "16": {"type": "theme", "num": "16", "title": "¿Cuál es el proceso de ejecución presupuestaria?", "categories": ["90-93% de ejecución"], "values": [5], "n": 5}, "17": {"type": "multi", "num": "17", "title": "Fuentes de financiamiento del servicio de DNA", "categories": ["Municipales propias"], "values": [6], "n": 6}, "18": {"type": "cat", "num": "18", "title": "¿El presupuesto designado se encuentra acorde a las necesidades de las Defensorías?", "categories": ["NO"], "values": [5], "n": 5}, "19.1": {"type": "num_simple", "num": "19.1", "title": "Casos atendidos en promedio por DÍA", "unit": "casos/día", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "19.2": {"type": "num_simple", "num": "19.2", "title": "Casos atendidos en promedio por MES", "unit": "casos/mes", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "19.3": {"type": "num_simple", "num": "19.3", "title": "Casos atendidos en promedio por AÑO", "unit": "casos/año", "n": 1, "values": [1000.0], "avg": 1000.0, "min": 1000.0, "max": 1000.0, "median": 1000.0, "total": 1000.0}, "20": {"type": "theme", "num": "20", "title": "3 tipologías prevalentes en la atención de casos", "categories": ["Asistencia familiar", "Conflictos de guarda y tutela", "Violencia psicológica", "Machismo / Desigualdad de género"], "values": [6, 5, 1, 1], "n": 13}, "22.1": {"type": "num_simple", "num": "22.1", "title": "N° de casos en procesos judiciales", "unit": "casos", "n": 1, "values": [87.0], "avg": 87.0, "min": 87.0, "max": 87.0, "median": 87.0, "total": 87.0}, "22.2": {"type": "num_simple", "num": "22.2", "title": "N° de casos en proceso de conclusión", "unit": "casos", "n": 1, "values": [42.0], "avg": 42.0, "min": 42.0, "max": 42.0, "median": 42.0, "total": 42.0}, "22.3": {"type": "num_simple", "num": "22.3", "title": "N° de casos con resolución judicial / Cierre", "unit": "casos", "n": 1, "values": [1.0], "avg": 1.0, "min": 1.0, "max": 1.0, "median": 1.0, "total": 1.0}, "21": {"type": "theme", "num": "21", "title": "Desafíos u obstáculos que enfrenta la DNA", "categories": ["Familias normalizan la violencia", "Familias no apoyan / Obstaculizan", "Falta de orientación y concientización", "Embarazos en adolescentes", "Cobertura territorial limitada", "Mujeres callan / Silencio social"], "values": [4, 2, 3, 1, 1, 1], "n": 12}, "23": {"type": "cat", "num": "23", "title": "¿Considera que la DNA cumple con su misión como instancia protectora?", "categories": ["SI"], "values": [5], "n": 5}, "24": {"type": "theme", "num": "24", "title": "Acciones sugeridas para que la DNA lleve a cabo su rol de manera óptima", "categories": ["Equipos de prevención comunitaria", "Más talleres y capacitaciones", "Integración familiar"], "values": [5, 8, 1], "n": 14}, "25": {"type": "cat", "num": "25", "title": "¿La DNA desarrolla o implementa acciones o estrategias de prevención?", "categories": ["SI"], "values": [6], "n": 6}, "25.1": {"type": "theme", "num": "25.1", "title": "¿Cuáles son estas acciones de prevención?", "categories": ["Talleres en Unidades Educativas", "Capacitación y talleres generales"], "values": [1, 5], "n": 6}, "26": {"type": "cat", "num": "26", "title": "¿La DNA participa de reuniones interinstitucionales o REDES?", "categories": ["SI"], "values": [6], "n": 6}, "26.1": {"type": "cat", "num": "26.1", "title": "¿Con qué frecuencia participa en reuniones?", "categories": ["CUANDO HAY CASOS", "CADA QUE HAY CASOS", "CUANDO SE PRESENTAN CASOS", "PROCURAMOS REUNIRNOS SEGUIDO PARA MANTENER ESA LINEA DE PREVENCIÓN"], "values": [3, 1, 1, 1], "n": 6}, "27": {"type": "multi", "num": "27", "title": "Organizaciones con las que se realiza coordinación", "categories": ["Unidades Educativas / Distritales", "Policía Nacional", "Organizaciones Sociales"], "values": [6, 6, 6], "n": 6}, "28": {"type": "theme", "num": "28", "title": "¿Cómo definiría la coordinación con las organizaciones mencionadas?", "categories": ["Muy buena", "Buena"], "values": [4, 10], "n": 14}}, 
 "sections": [
   {
     "title": "ESTADO SITUACIONAL DE LAS DEFENSORÍAS DE LA NIÑEZ Y ADOLESCENCIA",
@@ -296,16 +344,16 @@ const SECONDARY = D.palette.secondary;
 const CAT_COLORS = {
   'SI':PRIMARY, 'NO':'#B5B0A8',
   'Sí':PRIMARY, 'sí':PRIMARY, 'Si':PRIMARY,
-  'Parcialmente':SECONDARY,
-  'Culminado':'#27AE60', 'Medio':SECONDARY, 'Inicial':'#E67E22',
-  'Bueno':'#27AE60', 'Regular':SECONDARY,
+  'Parcialmente':'#E67E22',
+  'Culminado':'#27AE60', 'Medio':'#E67E22', 'Inicial':'#E74C3C',
+  'Bueno':'#27AE60', 'Regular':'#E67E22',
   'Malo':'#E74C3C', 'Mala':'#E74C3C',
-  'Siempre':'#27AE60', 'A veces':SECONDARY, 'Nunca':'#E74C3C',
+  'Siempre':'#27AE60', 'A veces':'#E67E22', 'Nunca':'#E74C3C',
   'Muy Buena':'#27AE60', 'Buena':'#82E0AA',
   'Alto':'#27AE60', 'Bajo':'#E74C3C', 'Ninguno':'#B5B0A8',
 };
 
-const THEME_PALETTE = [PRIMARY, SECONDARY, '#5499C9', '#27AE60', '#E67E22', '#8E44AD', '#16A085', '#C0392B', '#7F8C8D'];
+const THEME_PALETTE = [PRIMARY, '#2980B9', '#C9A82A', '#27AE60', '#E67E22', '#8E44AD', '#16A085', '#C0392B', '#7F8C8D'];
 
 let cid = 0;
 const uid = () => 'c' + (cid++);
@@ -339,6 +387,7 @@ const valueLabelsPlugin = {
     ctx.textAlign = 'left';
     chart.data.datasets.forEach((dataset, i) => {
       const meta = chart.getDatasetMeta(i);
+      const numDs = chart.data.datasets.length;
       meta.data.forEach((bar, idx) => {
         const value = dataset.data[idx];
         if (value > 0 && bar && bar.x != null) {
@@ -349,7 +398,11 @@ const valueLabelsPlugin = {
             color = dataset.backgroundColor || '#333';
           }
           ctx.fillStyle = color;
-          ctx.fillText(value, bar.x + 6, bar.y);
+          const total = numDs > 1
+            ? chart.data.datasets.reduce((a,d)=>a+(d.data[idx]||0),0)||1
+            : dataset.data.reduce((a,b)=>a+b,0)||1;
+          const pct = Math.round(value/total*100);
+          ctx.fillText(`${pct}%`, bar.x + 6, bar.y);
         }
       });
     });
@@ -361,7 +414,7 @@ function renderDoughnut(id, cats, vals) {
   const ctx = document.getElementById(id)?.getContext('2d'); if(!ctx) return;
   new Chart(ctx, { type:'doughnut', data:{
     labels:cats,
-    datasets:[{data:vals, backgroundColor:cats.map(c=>CAT_COLORS[c]||PRIMARY),
+    datasets:[{data:vals, backgroundColor:cats.map((c,i)=>CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length]),
                borderWidth:2,borderColor:'#fff',hoverOffset:8}]
   }, options:{
     cutout:'62%', responsive:true, maintainAspectRatio:false,
@@ -375,7 +428,7 @@ function renderPie(id, cats, vals) {
   const ctx = document.getElementById(id)?.getContext('2d'); if(!ctx) return;
   new Chart(ctx, { type:'pie', data:{
     labels:cats,
-    datasets:[{data:vals, backgroundColor:cats.map(c=>CAT_COLORS[c]||PRIMARY),
+    datasets:[{data:vals, backgroundColor:cats.map((c,i)=>CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length]),
                borderWidth:2,borderColor:'#fff',hoverOffset:8}]
   }, options:{
     responsive:true, maintainAspectRatio:false,
@@ -389,7 +442,7 @@ function renderHBar(id, cats, vals, useCatColors=true) {
   const ctx = document.getElementById(id)?.getContext('2d'); if(!ctx) return;
   const total = vals.reduce((a,b)=>a+b,0)||1;
   const colors = useCatColors
-    ? cats.map(c=>CAT_COLORS[c]||PRIMARY)
+    ? cats.map((c,i)=>CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length])
     : cats.map((_,i)=>THEME_PALETTE[i % THEME_PALETTE.length]);
   const wrappedLabels = cats.map(c => wrapLabel(c, 32));
   const maxVal = Math.max(...vals, 1);
@@ -447,7 +500,7 @@ function renderGroupedHBar(id, labels, datasets) {
 function legHtml(cats, vals, useCatColors=true) {
   const tot = vals.reduce((a,b)=>a+b,0)||1;
   return '<div class="legend">'+cats.map((c,i)=>{
-    const color = useCatColors ? (CAT_COLORS[c]||PRIMARY) : THEME_PALETTE[i % THEME_PALETTE.length];
+    const color = useCatColors ? (CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length]) : THEME_PALETTE[i % THEME_PALETTE.length];
     return `<div class="leg-item"><div class="leg-swatch" style="background:${color}"></div>
       <strong>${c}</strong>:&nbsp;(${Math.round(vals[i]/tot*100)}%)</div>`;
   }).join('')+'</div>';
@@ -561,9 +614,9 @@ function cardTimeStat(q) {
     <div class="card-q">${q.title}</div>
     <div class="card-meta">Promedios reportados</div>
     <div class="numeric-grid">
-      <div class="num-block"><div class="num-label">Años</div><div class="num-big">${fmtNum(a.avg)}</div><div class="num-unit">prom. (n=${a.n})</div><div class="num-detail">min ${fmtNum(a.min)} · max ${fmtNum(a.max)}</div></div>
-      <div class="num-block"><div class="num-label">Meses</div><div class="num-big">${fmtNum(m.avg)}</div><div class="num-unit">prom. (n=${m.n})</div><div class="num-detail">min ${fmtNum(m.min)} · max ${fmtNum(m.max)}</div></div>
-      <div class="num-block"><div class="num-label">Sesiones</div><div class="num-big">${fmtNum(s.avg)}</div><div class="num-unit">prom. (n=${s.n})</div><div class="num-detail">min ${fmtNum(s.min)} · max ${fmtNum(s.max)}</div></div>
+      <div class="num-block"><div class="num-label">Años</div><div class="num-big">${fmtNum(a.avg)}</div><div class="num-unit">prom.</div><div class="num-detail">min ${fmtNum(a.min)} · max ${fmtNum(a.max)}</div></div>
+      <div class="num-block"><div class="num-label">Meses</div><div class="num-big">${fmtNum(m.avg)}</div><div class="num-unit">prom.</div><div class="num-detail">min ${fmtNum(m.min)} · max ${fmtNum(m.max)}</div></div>
+      <div class="num-block"><div class="num-label">Sesiones</div><div class="num-big">${fmtNum(s.avg)}</div><div class="num-unit">prom.</div><div class="num-detail">min ${fmtNum(s.min)} · max ${fmtNum(s.max)}</div></div>
     </div>
   </div>`;
 }
@@ -575,11 +628,11 @@ function cardCoverage(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">Datos agregados de ${Math.max(a.n,m.n,c.n)} programas</div>
+    <div class="card-meta">Datos agregados</div>
     <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
-      <div class="cov-row"><span class="cov-label">N° familias atendidas (total)</span><span class="cov-stat">${fmtNum(a.total)}<small>(n=${a.n})</small></span></div>
-      <div class="cov-row"><span class="cov-label">N° familias meta (total)</span><span class="cov-stat">${fmtNum(m.total)}<small>(n=${m.n})</small></span></div>
-      <div class="cov-row"><span class="cov-label">% Cobertura promedio</span><span class="cov-stat">${pctAvg}%<small>(n=${c.n})</small></span></div>
+      <div class="cov-row"><span class="cov-label">N° familias atendidas (total)</span><span class="cov-stat">${fmtNum(a.total)}</span></div>
+      <div class="cov-row"><span class="cov-label">N° familias meta (total)</span><span class="cov-stat">${fmtNum(m.total)}</span></div>
+      <div class="cov-row"><span class="cov-label">% Cobertura promedio</span><span class="cov-stat">${pctAvg}%</span></div>
       <div class="cov-row"><span class="cov-label">Atendidas — promedio por programa</span><span class="cov-stat">${fmtNum(a.avg)}<small>min ${fmtNum(a.min)} · max ${fmtNum(a.max)}</small></span></div>
     </div>
   </div>`;
@@ -591,11 +644,11 @@ function cardPersonnel(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">Totales agregados · ${Math.max(v.n,m.n,t.n)} programas que reportan</div>
+    <div class="card-meta">Totales agregados</div>
     <div class="pers-grid">
-      <div class="pers-block pers-v"><div class="pers-label">Varones</div><div class="pers-num">${fmtNum(v.total)}</div><div class="pers-detail">prom. ${fmtNum(v.avg)} (n=${v.n})</div></div>
-      <div class="pers-block pers-m"><div class="pers-label">Mujeres</div><div class="pers-num">${fmtNum(m.total)}</div><div class="pers-detail">prom. ${fmtNum(m.avg)} (n=${m.n})</div></div>
-      <div class="pers-block pers-t"><div class="pers-label">Total</div><div class="pers-num">${fmtNum(t.total)}</div><div class="pers-detail">prom. ${fmtNum(t.avg)} (n=${t.n})</div></div>
+      <div class="pers-block pers-v"><div class="pers-label">Varones</div><div class="pers-num">${fmtNum(v.total)}</div><div class="pers-detail">prom. ${fmtNum(v.avg)}</div></div>
+      <div class="pers-block pers-m"><div class="pers-label">Mujeres</div><div class="pers-num">${fmtNum(m.total)}</div><div class="pers-detail">prom. ${fmtNum(m.avg)}</div></div>
+      <div class="pers-block pers-t"><div class="pers-label">Total</div><div class="pers-num">${fmtNum(t.total)}</div><div class="pers-detail">prom. ${fmtNum(t.avg)}</div></div>
     </div>
   </div>`;
 }
@@ -620,7 +673,7 @@ function cardTagList(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">${q.items.length} respuestas registradas</div>
+
     <div class="tag-list">${tags}</div>
   </div>`;
 }
@@ -639,7 +692,7 @@ function cardMatrix(q) {
   return `<div class="card span_full">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">${q.items.length} criterios evaluados · respuestas SI / NO</div>
+    <div class="card-meta">criterios evaluados · respuestas SI / NO</div>
     <div class="chart-area" style="height:${hpx}px"><canvas id="${id}"></canvas></div>
   </div>`;
 }
@@ -666,7 +719,7 @@ D.summary.forEach(s => {
   sumRow.innerHTML += `<div class="sum-card">
     <div class="sum-pct">${s.pct}<sub>%</sub></div>
     <div class="sum-q">${s.q}</div>
-    <div class="sum-n">Preg. ${s.num} · n=${s.n}</div>
+    <div class="sum-n">Preg. ${s.num}</div>
   </div>`;
 });
 

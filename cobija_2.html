@@ -22,9 +22,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --P:#1B6B5E;
-  --S:#3F8AC8;
-  --A:#E8C547;
+  --P:#1B7B35;
+  --S:#C41E1E;
+  --A:#E8C010;
   --bg:#F8F7F4;
   --card:#FFFFFF;
   --border:#E4E1DB;
@@ -52,7 +52,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
 .breadcrumb .sep{color:#C9C5BD;font-weight:400}
 .breadcrumb .current{color:var(--text);font-weight:500}
 
-.hero{background:linear-gradient(135deg,#0E3A33 0%,#1B6B5E 50%,#2C8E7E 80%,#3F8AC8 100%);color:#fff;padding:56px 60px 48px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#0A4520 0%,#1B7B35 55%,#249B48 100%);color:#fff;padding:56px 60px 48px;position:relative;overflow:hidden}
 .hero-deco{position:absolute;border-radius:50%;border:50px solid rgba(255,255,255,0.05)}
 .hero-deco.d1{width:400px;height:400px;top:-100px;right:-80px}
 .hero-deco.d2{width:260px;height:260px;bottom:-60px;left:35%}
@@ -168,7 +168,60 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
   .summary-section,.section,.footer,.breadcrumb{padding-left:24px;padding-right:24px}
   .nav{padding:0 24px}
 }
-</style>
+
+/* ── UNICEF PROFESSIONAL ENHANCEMENTS ───────────────────────────── */
+html{scroll-behavior:smooth}
+body{background:linear-gradient(175deg,#EBF3F9 0%,#F8F7F4 320px)}
+
+.site-header{border-top:3px solid #1CABE2;padding-top:9px;box-shadow:0 2px 16px rgba(0,0,0,.07)}
+
+.hero-pill{background:rgba(28,171,226,.25);border-color:rgba(28,171,226,.5)}
+.hero h1{text-shadow:0 2px 16px rgba(0,0,0,.20)}
+
+.summary-section{background:linear-gradient(135deg,#0B2E47 0%,#154360 60%,#1A5A88 100%);border-bottom:none;position:relative;overflow:hidden}
+.summary-section::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1CABE2,rgba(28,171,226,0))}
+.summary-title{color:rgba(255,255,255,.55);letter-spacing:4px}
+.sum-card{border-right-color:rgba(255,255,255,.12)}
+.sum-pct{color:#1CABE2;font-size:38px}
+.sum-pct sub{color:rgba(28,171,226,.8)}
+.sum-q{color:rgba(255,255,255,.82);font-size:11px}
+.sum-n{color:rgba(255,255,255,.35);font-size:9.5px}
+
+.sec-header{background:linear-gradient(135deg,rgba(28,171,226,.07) 0%,transparent 100%);border-bottom:none;border-left:4px solid #1CABE2;border-radius:0 10px 10px 0;padding:14px 20px 14px 22px}
+.sec-roman{color:#1CABE2;font-size:32px}
+.sec-title-text h2{font-size:20px}
+
+.card{border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.04),0 2px 12px rgba(0,0,0,.04);overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 36px rgba(0,0,0,.10),0 2px 8px rgba(0,0,0,.05);border-color:rgba(28,171,226,.35)}
+.card-num{background:linear-gradient(135deg,#EBF3F9,#D6E9F5);color:var(--P);padding:3px 10px;border-radius:20px;font-size:9px;letter-spacing:2px;display:inline-block;margin-bottom:7px;font-weight:700}
+.card-q{font-size:13.5px;font-weight:600}
+.card-meta{font-size:11px;color:var(--muted);margin-bottom:14px;padding-bottom:10px;border-bottom:1px dashed rgba(0,0,0,.08)}
+
+.legend{gap:8px;margin-top:14px;padding-top:12px}
+.leg-item{background:rgba(0,0,0,.03);padding:4px 12px;border-radius:20px;border:1px solid rgba(0,0,0,.07);font-size:11px;font-weight:500;color:var(--text)}
+.leg-swatch{width:8px;height:8px;border-radius:50%}
+
+.stat-ring{box-shadow:0 0 0 4px rgba(21,67,96,.08),0 4px 20px rgba(0,0,0,.10);background:radial-gradient(circle,#fff 62%,rgba(21,67,96,.05))}
+.stat-ring .num{font-size:38px}
+
+.num-block{background:linear-gradient(135deg,#EEF5FA,#fff);border-color:rgba(21,67,96,.12);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.num-big{font-size:30px}
+
+.tag-item{background:linear-gradient(135deg,#EBF3F9,#D6E9F5)!important;color:var(--P)!important;border:1px solid rgba(21,67,96,.18)!important;font-weight:600!important;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+
+.cov-stat{color:var(--P);font-size:20px}
+
+.pers-v{background:linear-gradient(135deg,rgba(84,153,201,.14),rgba(84,153,201,.05))}
+.pers-m{background:linear-gradient(135deg,rgba(155,35,53,.12),rgba(155,35,53,.04))}
+.pers-t{background:linear-gradient(135deg,var(--P),#1A6090)}
+.pers-num{font-size:28px}
+
+.grid{gap:20px}
+
+.footer{background:linear-gradient(135deg,#0B2E47,#154360);color:rgba(255,255,255,.62);border-top:none;margin-top:64px}
+.footer strong{color:#1CABE2}
+.footer .foot-brand svg{opacity:.85}
+/* ──────────────────────────────────────────────────────────────── */</style>
 </head>
 <body>
 
@@ -213,11 +266,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
   <div class="hero-deco d3"></div>
   <div class="hero-flag-wrap">
     <div class="hero-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-  <rect width="60" height="13.33" y="0" fill="#3F8AC8"/>
-  <rect width="60" height="13.34" y="13.33" fill="#FFFFFF"/>
-  <rect width="60" height="13.33" y="26.67" fill="#1B7A47"/>
-  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/>
-</svg></div>
+  <rect width="60" height="40" fill="#FFFFFF"/>
+  <rect y="20" width="60" height="20" fill="#C41E1E"/>
+  <polygon points="0,0 0,40 28,20" fill="#1B7B35"/>
+  <polygon points="9.3,16.0 10.2,18.7 13.1,18.8 10.8,20.5 11.7,23.2 9.3,21.6 6.9,23.2 7.8,20.5 5.5,18.8 8.4,18.7" fill="#E8C010"/>
+  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/></svg></div>
     <div class="hero-flag-lbl">Bandera oficial</div>
   </div>
   <div class="hero-content">
@@ -225,7 +278,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
     <h1>Cobija</h1>
     <div class="hero-instrument">Prevención de Violencia desde la Comunidad</div>
     <div class="hero-pills">
-      <span class="hero-pill">n = 2 respondentes</span>
+      <span class="hero-pill">n = 2 Encuestados</span>
       <span class="hero-pill">Programas Comunitarios</span>
       <span class="hero-pill">55 preguntas · 7 secciones</span>
     </div>
@@ -266,7 +319,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
 </div>
 
 <script>
-const D = {"muni": "Cobija", "slug": "cobija", "depto": "Pando", "n": 2, "palette": {"primary": "#1B6B5E", "secondary": "#3F8AC8", "accent": "#E8C547", "hero_grad": "linear-gradient(135deg,#0E3A33 0%,#1B6B5E 50%,#2C8E7E 80%,#3F8AC8 100%)"}, "instrument": {"id": "2", "name": "Instrumento Pilar 2", "subtitle": "Programas Comunitarios", "eyebrow": "Instrumento Pilar 2 Comunidad", "hero_subtitle": "Prevención de Violencia desde la Comunidad", "count_label": "55 preguntas"}, "questions": {"1": {"type": "cat", "num": "1", "title": "¿El municipio cuenta con programas comunitarios específicos de prevención de violencia hacia NNA?", "categories": ["NO"], "values": [1], "n": 1}, "2": {"type": "tag_list", "num": "2", "title": "¿Cuáles son?", "items": [], "n": 0}, "3": {"type": "multi", "num": "3", "title": "¿Qué tipos de programas comunitarios existen actualmente?", "categories": ["CIPCA - SLIM"], "values": [1], "n": 1}, "4": {"type": "cat", "num": "4", "title": "¿Estos programas son clasificados por el municipio como programas de \"prevención de violencia\"?", "categories": ["SI"], "values": [1], "n": 1}, "4.1": {"type": "theme", "num": "4.1", "title": "¿Por qué? (Clasificación como prevención)", "categories": [], "values": [], "n": 0}, "5": {"type": "theme", "num": "5", "title": "Criterios para clasificar un programa como de prevención de violencia", "categories": ["Reducción de factores de riesgo"], "values": [1], "n": 1}, "6": {"type": "cat", "num": "6", "title": "¿Existen líderes comunitarios formalmente reconocidos en protección infantil?", "categories": ["NO"], "values": [1], "n": 1}, "6.1": {"type": "num_simple", "num": "6.1", "title": "¿Cuántos líderes comunitarios?", "unit": "líderes", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "7": {"type": "theme", "num": "7", "title": "¿Cómo se seleccionan los líderes comunitarios?", "categories": ["Elección comunitaria/Democrática"], "values": [1], "n": 1}, "8": {"type": "cat", "num": "8", "title": "¿Existen promotores comunitarios activos en el municipio?", "categories": ["SI"], "values": [1], "n": 1}, "8.1": {"type": "num_simple", "num": "8.1", "title": "¿Cuántos promotores comunitarios?", "unit": "promotores", "n": 1, "values": [3.0], "avg": 3.0, "min": 3.0, "max": 3.0, "median": 3.0, "total": 3.0}, "9": {"type": "theme", "num": "9", "title": "¿Cómo se seleccionan estos promotores comunitarios?", "categories": ["Por elección comunitaria"], "values": [1], "n": 1}, "10": {"type": "cat", "num": "10", "title": "¿Existen espacios comunitarios definidos como \"seguros y protectores\" para NNA?", "categories": ["NO"], "values": [1], "n": 1}, "10.1": {"type": "num_simple", "num": "10.1", "title": "¿Cuántos espacios seguros?", "unit": "espacios", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "10.2": {"type": "theme", "num": "10.2", "title": "¿Cuáles son estos espacios seguros?", "categories": [], "values": [], "n": 0}, "11": {"type": "theme", "num": "11", "title": "Criterios para definir un espacio como seguro y protector", "categories": [], "values": [], "n": 0}, "12": {"type": "multi", "num": "12", "title": "¿Quién financia principalmente los programas comunitarios?", "categories": ["ONG nacionales", "ONG internacionales", "Agencias ONU"], "values": [1, 1, 1], "n": 1}, "13": {"type": "multi", "num": "13", "title": "Instituciones/organizaciones responsables de ejecutar los programas", "categories": ["Defensoría del pueblo - Fiscalía", "DNA / GAM", "ONG internacionales"], "values": [1, 1, 1], "n": 2}, "14": {"type": "theme", "num": "14", "title": "¿Qué grado de involucramiento tiene el municipio en los programas de prevención?", "categories": ["Bajo"], "values": [1], "n": 1}, "15": {"type": "cat", "num": "15", "title": "¿Los programas comunitarios están articulados con los servicios de protección (DNA, SLIM, salud, educación)?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "16": {"type": "cat", "num": "16", "title": "¿La coordinación interinstitucional ha mejorado la respuesta o prevención de la violencia en la comunidad?", "categories": ["Nada", "Algo"], "values": [1, 1], "n": 2}, "17": {"type": "cat", "num": "17", "title": "¿Existen convenios, resoluciones o acuerdos formales que respalden los programas comunitarios?", "categories": ["NO"], "values": [2], "n": 2}, "18": {"type": "cat", "num": "18", "title": "¿El financiamiento y apoyo institucional garantizan continuidad del programa en el tiempo?", "categories": ["NO"], "values": [2], "n": 2}, "19": {"type": "multi", "num": "19", "title": "¿Qué grupos etarios cubren en su mayoría estos programas?", "categories": [], "values": [], "n": 0}, "20": {"type": "multi", "num": "20", "title": "¿En qué poblaciones se implementan en su mayoría estos programas?", "categories": [], "values": [], "n": 0}, "21": {"type": "num_simple", "num": "21", "title": "Familias/NNA beneficiarios directos", "unit": "personas", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "21.1": {"type": "num_simple", "num": "21.1", "title": "% en relación a la población", "unit": "%", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "22": {"type": "matrix", "num": "22", "title": "Criterios de inclusión para poblaciones específicas", "items": [{"label": "NNA con discapacidad", "categories": [], "values": [], "n": 0}, {"label": "NNA indígenas, originarias", "categories": [], "values": [], "n": 0}, {"label": "NNA en situación de pobreza extrema", "categories": [], "values": [], "n": 0}, {"label": "Adolescentes en riesgo de uniones tempranas", "categories": [], "values": [], "n": 0}, {"label": "Otro", "categories": [], "values": [], "n": 0}]}, "23": {"type": "cat", "num": "23", "title": "¿Con qué frecuencia se realizan las actividades de los programas comunitarios?", "categories": ["Mensual"], "values": [1], "n": 1}, "24": {"type": "cat", "num": "24", "title": "¿Cuánto tiempo dura el ciclo completo de cada programa?", "categories": [], "values": [], "n": 0}, "25": {"type": "num_simple", "num": "25", "title": "N° de personas iniciales en el programa", "unit": "personas", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "25.1": {"type": "num_simple", "num": "25.1", "title": "% que completa todo el ciclo", "unit": "%", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "26": {"type": "theme", "num": "26", "title": "Instituciones del estado/gobernación/municipio que participan en la implementación o derivación", "categories": ["DNA (Defensoría Niñez)"], "values": [1], "n": 1}, "27": {"type": "num_simple", "num": "27", "title": "N° de comunidades/barrios", "unit": "comunidades", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "27.1": {"type": "num_simple", "num": "27.1", "title": "N° de espacios seguros activos", "unit": "espacios", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "28": {"type": "cat", "num": "28", "title": "¿Existen mecanismos comunitarios de seguimiento a la asistencia y participación de NNAs?", "categories": ["NO"], "values": [1], "n": 1}, "29": {"type": "cat", "num": "29", "title": "¿Los programas están conectados con redes comunitarias existentes (juntas vecinales, comités NNA, organizaciones indígenas)?", "categories": ["NO"], "values": [1], "n": 1}, "30": {"type": "multi", "num": "30", "title": "¿Qué temáticas se abordan en los programas comunitarios?", "categories": [], "values": [], "n": 0}, "31.1": {"type": "multi", "num": "31.1", "title": "¿Qué metodologías se emplean en los programas?", "categories": [], "values": [], "n": 0}, "31.2": {"type": "cat", "num": "31.2", "title": "¿Los contenidos abordan explícitamente la prevención de violencia en el hogar y la comunidad?", "categories": ["SI"], "values": [1], "n": 1}, "32": {"type": "cat", "num": "32", "title": "¿Los programas incluyen actividades diseñadas para NNA como protagonistas?", "categories": ["SI"], "values": [1], "n": 1}, "33": {"type": "cat", "num": "33", "title": "¿La coordinación interinstitucional ha mejorado la respuesta o prevención de la violencia?", "categories": ["Nada", "Algo"], "values": [1, 1], "n": 2}, "34": {"type": "cat", "num": "34", "title": "¿Se aplican metodologías diferenciadas según edad, género y contexto cultural?", "categories": ["SI"], "values": [1], "n": 1}, "35": {"type": "cat", "num": "35", "title": "¿Se utilizan materiales educativos estandarizados?", "categories": [], "values": [], "n": 0}, "36": {"type": "cat", "num": "36", "title": "¿Los promotores y líderes comunitarios cuentan con kits o herramientas prácticas?", "categories": ["NO"], "values": [1], "n": 1}, "37": {"type": "cat", "num": "37", "title": "¿Se desarrollan actividades en idioma local o indígena cuando corresponde?", "categories": ["NO"], "values": [1], "n": 1}, "38": {"type": "cat", "num": "38", "title": "¿Se adaptan los ejemplos y contenidos a la realidad comunitaria?", "categories": ["SI"], "values": [2], "n": 2}, "39": {"type": "cat", "num": "39", "title": "¿Los líderes/promotores reciben formación específica para facilitar los contenidos?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "40": {"type": "cat", "num": "40", "title": "¿Se aplican pre y post tests para medir cambios en conocimientos de promotores/líderes?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "41": {"type": "cat", "num": "41", "title": "¿Las actividades fomentan la participación activa de las familias y NNA?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "42": {"type": "cat", "num": "42", "title": "¿Se promueve el liderazgo local para dar continuidad a los programas?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "43": {"type": "num_simple", "num": "43", "title": "N° de promotores comunitarios activos", "unit": "promotores", "n": 1, "values": [8.0], "avg": 8.0, "min": 8.0, "max": 8.0, "median": 8.0, "total": 8.0}, "44": {"type": "cat", "num": "44", "title": "¿Los promotores comunitarios reciben incentivos o apoyos para su trabajo?", "categories": ["NO"], "values": [2], "n": 2}, "45": {"type": "num_simple", "num": "45", "title": "N° de líderes comunitarios capacitados en protección infantil", "unit": "líderes", "n": 1, "values": [0.0], "avg": 0.0, "min": 0.0, "max": 0.0, "median": 0.0, "total": 0.0}, "46": {"type": "cat", "num": "46", "title": "¿Los líderes comunitarios reciben acompañamiento técnico de la DNA u otra institución?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "47": {"type": "cat", "num": "47", "title": "¿Existen facilitadores formados en metodologías de prevención de violencia comunitaria?", "categories": ["NO"], "values": [1], "n": 1}, "48": {"type": "cat", "num": "48", "title": "¿El personal técnico de DNA participa en el acompañamiento a programas comunitarios?", "categories": ["NO"], "values": [1], "n": 1}, "49": {"type": "cat", "num": "49", "title": "¿Los programas comunitarios cuentan con materiales de apoyo para su implementación?", "categories": ["NO"], "values": [2], "n": 2}, "50": {"type": "multi", "num": "50", "title": "¿Qué materiales están disponibles?", "categories": ["Guía del promotor comunitario", "Guía de formación de promotores", "Láminas educativas", "Manuales complementarios"], "values": [1, 1, 1, 1], "n": 1}, "51": {"type": "ordinal", "num": "51", "title": "¿Cuál es el estado de los materiales disponibles?", "categories": ["Bueno"], "values": [1], "n": 1}, "52": {"type": "cat", "num": "52", "title": "¿Existen espacios físicos comunitarios utilizados como puntos de encuentro o espacios seguros?", "categories": ["NO"], "values": [2], "n": 2}, "53": {"type": "cat", "num": "53", "title": "¿Los espacios comunitarios cuentan con condiciones básicas para actividades con NNA?", "categories": ["NO"], "values": [2], "n": 2}, "54": {"type": "cat", "num": "54", "title": "¿Existen recursos logísticos disponibles para el funcionamiento de programas comunitarios?", "categories": ["Parcialmente", "NO"], "values": [1, 1], "n": 2}, "55": {"type": "cat", "num": "55", "title": "¿El municipio asigna recursos humanos y materiales de manera estable para sostener estos programas?", "categories": ["NO"], "values": [2], "n": 2}}, 
+const D = {"muni": "Cobija", "slug": "cobija", "depto": "Pando", "n": 2, "palette": {"primary": "#1B7B35", "secondary": "#C41E1E", "accent": "#E8C010", "hero_grad": "linear-gradient(135deg,#0A4520 0%,#1B7B35 55%,#249B48 100%)"}, "instrument": {"id": "2", "name": "Instrumento Pilar 2", "subtitle": "Programas Comunitarios", "eyebrow": "Instrumento Pilar 2 Comunidad", "hero_subtitle": "Prevención de Violencia desde la Comunidad", "count_label": "55 preguntas"}, "questions": {"1": {"type": "cat", "num": "1", "title": "¿El municipio cuenta con programas comunitarios específicos de prevención de violencia hacia NNA?", "categories": ["NO"], "values": [1], "n": 1}, "2": {"type": "tag_list", "num": "2", "title": "¿Cuáles son?", "items": [], "n": 0}, "3": {"type": "multi", "num": "3", "title": "¿Qué tipos de programas comunitarios existen actualmente?", "categories": ["CIPCA - SLIM"], "values": [1], "n": 1}, "4": {"type": "cat", "num": "4", "title": "¿Estos programas son clasificados por el municipio como programas de \"prevención de violencia\"?", "categories": ["SI"], "values": [1], "n": 1}, "4.1": {"type": "theme", "num": "4.1", "title": "¿Por qué? (Clasificación como prevención)", "categories": [], "values": [], "n": 0}, "5": {"type": "theme", "num": "5", "title": "Criterios para clasificar un programa como de prevención de violencia", "categories": ["Reducción de factores de riesgo"], "values": [1], "n": 1}, "6": {"type": "cat", "num": "6", "title": "¿Existen líderes comunitarios formalmente reconocidos en protección infantil?", "categories": ["NO"], "values": [1], "n": 1}, "6.1": {"type": "num_simple", "num": "6.1", "title": "¿Cuántos líderes comunitarios?", "unit": "líderes", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "7": {"type": "theme", "num": "7", "title": "¿Cómo se seleccionan los líderes comunitarios?", "categories": ["Elección comunitaria/Democrática"], "values": [1], "n": 1}, "8": {"type": "cat", "num": "8", "title": "¿Existen promotores comunitarios activos en el municipio?", "categories": ["SI"], "values": [1], "n": 1}, "8.1": {"type": "num_simple", "num": "8.1", "title": "¿Cuántos promotores comunitarios?", "unit": "promotores", "n": 1, "values": [3.0], "avg": 3.0, "min": 3.0, "max": 3.0, "median": 3.0, "total": 3.0}, "9": {"type": "theme", "num": "9", "title": "¿Cómo se seleccionan estos promotores comunitarios?", "categories": ["Por elección comunitaria"], "values": [1], "n": 1}, "10": {"type": "cat", "num": "10", "title": "¿Existen espacios comunitarios definidos como \"seguros y protectores\" para NNA?", "categories": ["NO"], "values": [1], "n": 1}, "10.1": {"type": "num_simple", "num": "10.1", "title": "¿Cuántos espacios seguros?", "unit": "espacios", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "10.2": {"type": "theme", "num": "10.2", "title": "¿Cuáles son estos espacios seguros?", "categories": [], "values": [], "n": 0}, "11": {"type": "theme", "num": "11", "title": "Criterios para definir un espacio como seguro y protector", "categories": [], "values": [], "n": 0}, "12": {"type": "multi", "num": "12", "title": "¿Quién financia principalmente los programas comunitarios?", "categories": ["ONG nacionales", "ONG internacionales", "Agencias ONU"], "values": [1, 1, 1], "n": 1}, "13": {"type": "multi", "num": "13", "title": "Instituciones/organizaciones responsables de ejecutar los programas", "categories": ["Defensoría del pueblo - Fiscalía", "DNA / GAM", "ONG internacionales"], "values": [1, 1, 1], "n": 2}, "14": {"type": "theme", "num": "14", "title": "¿Qué grado de involucramiento tiene el municipio en los programas de prevención?", "categories": ["Bajo"], "values": [1], "n": 1}, "15": {"type": "cat", "num": "15", "title": "¿Los programas comunitarios están articulados con los servicios de protección (DNA, SLIM, salud, educación)?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "16": {"type": "cat", "num": "16", "title": "¿La coordinación interinstitucional ha mejorado la respuesta o prevención de la violencia en la comunidad?", "categories": ["Nada", "Algo"], "values": [1, 1], "n": 2}, "17": {"type": "cat", "num": "17", "title": "¿Existen convenios, resoluciones o acuerdos formales que respalden los programas comunitarios?", "categories": ["NO"], "values": [2], "n": 2}, "18": {"type": "cat", "num": "18", "title": "¿El financiamiento y apoyo institucional garantizan continuidad del programa en el tiempo?", "categories": ["NO"], "values": [2], "n": 2}, "19": {"type": "multi", "num": "19", "title": "¿Qué grupos etarios cubren en su mayoría estos programas?", "categories": [], "values": [], "n": 0}, "20": {"type": "multi", "num": "20", "title": "¿En qué poblaciones se implementan en su mayoría estos programas?", "categories": [], "values": [], "n": 0}, "21": {"type": "num_simple", "num": "21", "title": "Familias/NNA beneficiarios directos", "unit": "personas", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "21.1": {"type": "num_simple", "num": "21.1", "title": "% en relación a la población", "unit": "%", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "22": {"type": "matrix", "num": "22", "title": "Criterios de inclusión para poblaciones específicas", "items": [{"label": "NNA con discapacidad", "categories": [], "values": [], "n": 0}, {"label": "NNA indígenas, originarias", "categories": [], "values": [], "n": 0}, {"label": "NNA en situación de pobreza extrema", "categories": [], "values": [], "n": 0}, {"label": "Adolescentes en riesgo de uniones tempranas", "categories": [], "values": [], "n": 0}, {"label": "Otro", "categories": [], "values": [], "n": 0}]}, "23": {"type": "cat", "num": "23", "title": "¿Con qué frecuencia se realizan las actividades de los programas comunitarios?", "categories": ["Mensual"], "values": [1], "n": 1}, "24": {"type": "cat", "num": "24", "title": "¿Cuánto tiempo dura el ciclo completo de cada programa?", "categories": [], "values": [], "n": 0}, "25": {"type": "num_simple", "num": "25", "title": "N° de personas iniciales en el programa", "unit": "personas", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "25.1": {"type": "num_simple", "num": "25.1", "title": "% que completa todo el ciclo", "unit": "%", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "26": {"type": "theme", "num": "26", "title": "Instituciones del estado/gobernación/municipio que participan en la implementación o derivación", "categories": ["DNA (Defensoría Niñez)"], "values": [1], "n": 1}, "27": {"type": "num_simple", "num": "27", "title": "N° de comunidades/barrios", "unit": "comunidades", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "27.1": {"type": "num_simple", "num": "27.1", "title": "N° de espacios seguros activos", "unit": "espacios", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "28": {"type": "cat", "num": "28", "title": "¿Existen mecanismos comunitarios de seguimiento a la asistencia y participación de NNAs?", "categories": ["NO"], "values": [1], "n": 1}, "29": {"type": "cat", "num": "29", "title": "¿Los programas están conectados con redes comunitarias existentes (juntas vecinales, comités NNA, organizaciones indígenas)?", "categories": ["NO"], "values": [1], "n": 1}, "30": {"type": "multi", "num": "30", "title": "¿Qué temáticas se abordan en los programas comunitarios?", "categories": [], "values": [], "n": 0}, "31.1": {"type": "multi", "num": "31.1", "title": "¿Qué metodologías se emplean en los programas?", "categories": [], "values": [], "n": 0}, "31.2": {"type": "cat", "num": "31.2", "title": "¿Los contenidos abordan explícitamente la prevención de violencia en el hogar y la comunidad?", "categories": ["SI"], "values": [1], "n": 1}, "32": {"type": "cat", "num": "32", "title": "¿Los programas incluyen actividades diseñadas para NNA como protagonistas?", "categories": ["SI"], "values": [1], "n": 1}, "33": {"type": "cat", "num": "33", "title": "¿La coordinación interinstitucional ha mejorado la respuesta o prevención de la violencia?", "categories": ["Nada", "Algo"], "values": [1, 1], "n": 2}, "34": {"type": "cat", "num": "34", "title": "¿Se aplican metodologías diferenciadas según edad, género y contexto cultural?", "categories": ["SI"], "values": [1], "n": 1}, "35": {"type": "cat", "num": "35", "title": "¿Se utilizan materiales educativos estandarizados?", "categories": [], "values": [], "n": 0}, "36": {"type": "cat", "num": "36", "title": "¿Los promotores y líderes comunitarios cuentan con kits o herramientas prácticas?", "categories": ["NO"], "values": [1], "n": 1}, "37": {"type": "cat", "num": "37", "title": "¿Se desarrollan actividades en idioma local o indígena cuando corresponde?", "categories": ["NO"], "values": [1], "n": 1}, "38": {"type": "cat", "num": "38", "title": "¿Se adaptan los ejemplos y contenidos a la realidad comunitaria?", "categories": ["SI"], "values": [2], "n": 2}, "39": {"type": "cat", "num": "39", "title": "¿Los líderes/promotores reciben formación específica para facilitar los contenidos?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "40": {"type": "cat", "num": "40", "title": "¿Se aplican pre y post tests para medir cambios en conocimientos de promotores/líderes?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "41": {"type": "cat", "num": "41", "title": "¿Las actividades fomentan la participación activa de las familias y NNA?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "42": {"type": "cat", "num": "42", "title": "¿Se promueve el liderazgo local para dar continuidad a los programas?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "43": {"type": "num_simple", "num": "43", "title": "N° de promotores comunitarios activos", "unit": "promotores", "n": 1, "values": [8.0], "avg": 8.0, "min": 8.0, "max": 8.0, "median": 8.0, "total": 8.0}, "44": {"type": "cat", "num": "44", "title": "¿Los promotores comunitarios reciben incentivos o apoyos para su trabajo?", "categories": ["NO"], "values": [2], "n": 2}, "45": {"type": "num_simple", "num": "45", "title": "N° de líderes comunitarios capacitados en protección infantil", "unit": "líderes", "n": 1, "values": [0.0], "avg": 0.0, "min": 0.0, "max": 0.0, "median": 0.0, "total": 0.0}, "46": {"type": "cat", "num": "46", "title": "¿Los líderes comunitarios reciben acompañamiento técnico de la DNA u otra institución?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "47": {"type": "cat", "num": "47", "title": "¿Existen facilitadores formados en metodologías de prevención de violencia comunitaria?", "categories": ["NO"], "values": [1], "n": 1}, "48": {"type": "cat", "num": "48", "title": "¿El personal técnico de DNA participa en el acompañamiento a programas comunitarios?", "categories": ["NO"], "values": [1], "n": 1}, "49": {"type": "cat", "num": "49", "title": "¿Los programas comunitarios cuentan con materiales de apoyo para su implementación?", "categories": ["NO"], "values": [2], "n": 2}, "50": {"type": "multi", "num": "50", "title": "¿Qué materiales están disponibles?", "categories": ["Guía del promotor comunitario", "Guía de formación de promotores", "Láminas educativas", "Manuales complementarios"], "values": [1, 1, 1, 1], "n": 1}, "51": {"type": "ordinal", "num": "51", "title": "¿Cuál es el estado de los materiales disponibles?", "categories": ["Bueno"], "values": [1], "n": 1}, "52": {"type": "cat", "num": "52", "title": "¿Existen espacios físicos comunitarios utilizados como puntos de encuentro o espacios seguros?", "categories": ["NO"], "values": [2], "n": 2}, "53": {"type": "cat", "num": "53", "title": "¿Los espacios comunitarios cuentan con condiciones básicas para actividades con NNA?", "categories": ["NO"], "values": [2], "n": 2}, "54": {"type": "cat", "num": "54", "title": "¿Existen recursos logísticos disponibles para el funcionamiento de programas comunitarios?", "categories": ["Parcialmente", "NO"], "values": [1, 1], "n": 2}, "55": {"type": "cat", "num": "55", "title": "¿El municipio asigna recursos humanos y materiales de manera estable para sostener estos programas?", "categories": ["NO"], "values": [2], "n": 2}}, 
 "sections": [
   {
     "title": "EXISTENCIA Y TIPOLOGÍA DE PROGRAMAS",
@@ -305,16 +358,16 @@ const SECONDARY = D.palette.secondary;
 const CAT_COLORS = {
   'SI':PRIMARY, 'NO':'#B5B0A8',
   'Sí':PRIMARY, 'sí':PRIMARY, 'Si':PRIMARY,
-  'Parcialmente':SECONDARY,
-  'Culminado':'#27AE60', 'Medio':SECONDARY, 'Inicial':'#E67E22',
-  'Bueno':'#27AE60', 'Regular':SECONDARY,
+  'Parcialmente':'#E67E22',
+  'Culminado':'#27AE60', 'Medio':'#E67E22', 'Inicial':'#E74C3C',
+  'Bueno':'#27AE60', 'Regular':'#E67E22',
   'Malo':'#E74C3C', 'Mala':'#E74C3C',
-  'Siempre':'#27AE60', 'A veces':SECONDARY, 'Nunca':'#E74C3C',
+  'Siempre':'#27AE60', 'A veces':'#E67E22', 'Nunca':'#E74C3C',
   'Muy Buena':'#27AE60', 'Buena':'#82E0AA',
   'Alto':'#27AE60', 'Bajo':'#E74C3C', 'Ninguno':'#B5B0A8',
 };
 
-const THEME_PALETTE = [PRIMARY, SECONDARY, '#5499C9', '#27AE60', '#E67E22', '#8E44AD', '#16A085', '#C0392B', '#7F8C8D'];
+const THEME_PALETTE = [PRIMARY, '#2980B9', '#E8C010', '#27AE60', '#E67E22', '#8E44AD', '#16A085', '#C0392B', '#7F8C8D'];
 
 let cid = 0;
 const uid = () => 'c' + (cid++);
@@ -348,6 +401,7 @@ const valueLabelsPlugin = {
     ctx.textAlign = 'left';
     chart.data.datasets.forEach((dataset, i) => {
       const meta = chart.getDatasetMeta(i);
+      const numDs = chart.data.datasets.length;
       meta.data.forEach((bar, idx) => {
         const value = dataset.data[idx];
         if (value > 0 && bar && bar.x != null) {
@@ -358,7 +412,11 @@ const valueLabelsPlugin = {
             color = dataset.backgroundColor || '#333';
           }
           ctx.fillStyle = color;
-          ctx.fillText(value, bar.x + 6, bar.y);
+          const total = numDs > 1
+            ? chart.data.datasets.reduce((a,d)=>a+(d.data[idx]||0),0)||1
+            : dataset.data.reduce((a,b)=>a+b,0)||1;
+          const pct = Math.round(value/total*100);
+          ctx.fillText(`${pct}%`, bar.x + 6, bar.y);
         }
       });
     });
@@ -370,7 +428,7 @@ function renderDoughnut(id, cats, vals) {
   const ctx = document.getElementById(id)?.getContext('2d'); if(!ctx) return;
   new Chart(ctx, { type:'doughnut', data:{
     labels:cats,
-    datasets:[{data:vals, backgroundColor:cats.map(c=>CAT_COLORS[c]||PRIMARY),
+    datasets:[{data:vals, backgroundColor:cats.map((c,i)=>CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length]),
                borderWidth:2,borderColor:'#fff',hoverOffset:8}]
   }, options:{
     cutout:'62%', responsive:true, maintainAspectRatio:false,
@@ -384,7 +442,7 @@ function renderPie(id, cats, vals) {
   const ctx = document.getElementById(id)?.getContext('2d'); if(!ctx) return;
   new Chart(ctx, { type:'pie', data:{
     labels:cats,
-    datasets:[{data:vals, backgroundColor:cats.map(c=>CAT_COLORS[c]||PRIMARY),
+    datasets:[{data:vals, backgroundColor:cats.map((c,i)=>CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length]),
                borderWidth:2,borderColor:'#fff',hoverOffset:8}]
   }, options:{
     responsive:true, maintainAspectRatio:false,
@@ -398,7 +456,7 @@ function renderHBar(id, cats, vals, useCatColors=true) {
   const ctx = document.getElementById(id)?.getContext('2d'); if(!ctx) return;
   const total = vals.reduce((a,b)=>a+b,0)||1;
   const colors = useCatColors
-    ? cats.map(c=>CAT_COLORS[c]||PRIMARY)
+    ? cats.map((c,i)=>CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length])
     : cats.map((_,i)=>THEME_PALETTE[i % THEME_PALETTE.length]);
   const wrappedLabels = cats.map(c => wrapLabel(c, 32));
   const maxVal = Math.max(...vals, 1);
@@ -456,7 +514,7 @@ function renderGroupedHBar(id, labels, datasets) {
 function legHtml(cats, vals, useCatColors=true) {
   const tot = vals.reduce((a,b)=>a+b,0)||1;
   return '<div class="legend">'+cats.map((c,i)=>{
-    const color = useCatColors ? (CAT_COLORS[c]||PRIMARY) : THEME_PALETTE[i % THEME_PALETTE.length];
+    const color = useCatColors ? (CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length]) : THEME_PALETTE[i % THEME_PALETTE.length];
     return `<div class="leg-item"><div class="leg-swatch" style="background:${color}"></div>
       <strong>${c}</strong>:&nbsp;(${Math.round(vals[i]/tot*100)}%)</div>`;
   }).join('')+'</div>';
@@ -569,9 +627,9 @@ function cardTimeStat(q) {
     <div class="card-q">${q.title}</div>
     <div class="card-meta">Promedios reportados</div>
     <div class="numeric-grid">
-      <div class="num-block"><div class="num-label">Años</div><div class="num-big">${fmtNum(a.avg)}</div><div class="num-unit">prom. (n=${a.n})</div><div class="num-detail">min ${fmtNum(a.min)} · max ${fmtNum(a.max)}</div></div>
-      <div class="num-block"><div class="num-label">Meses</div><div class="num-big">${fmtNum(m.avg)}</div><div class="num-unit">prom. (n=${m.n})</div><div class="num-detail">min ${fmtNum(m.min)} · max ${fmtNum(m.max)}</div></div>
-      <div class="num-block"><div class="num-label">Sesiones</div><div class="num-big">${fmtNum(s.avg)}</div><div class="num-unit">prom. (n=${s.n})</div><div class="num-detail">min ${fmtNum(s.min)} · max ${fmtNum(s.max)}</div></div>
+      <div class="num-block"><div class="num-label">Años</div><div class="num-big">${fmtNum(a.avg)}</div><div class="num-unit">prom.</div><div class="num-detail">min ${fmtNum(a.min)} · max ${fmtNum(a.max)}</div></div>
+      <div class="num-block"><div class="num-label">Meses</div><div class="num-big">${fmtNum(m.avg)}</div><div class="num-unit">prom.</div><div class="num-detail">min ${fmtNum(m.min)} · max ${fmtNum(m.max)}</div></div>
+      <div class="num-block"><div class="num-label">Sesiones</div><div class="num-big">${fmtNum(s.avg)}</div><div class="num-unit">prom.</div><div class="num-detail">min ${fmtNum(s.min)} · max ${fmtNum(s.max)}</div></div>
     </div>
   </div>`;
 }
@@ -583,11 +641,11 @@ function cardCoverage(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">Datos agregados de ${Math.max(a.n,m.n,c.n)} programas</div>
+    <div class="card-meta">Datos agregados</div>
     <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
-      <div class="cov-row"><span class="cov-label">N° familias atendidas (total)</span><span class="cov-stat">${fmtNum(a.total)}<small>(n=${a.n})</small></span></div>
-      <div class="cov-row"><span class="cov-label">N° familias meta (total)</span><span class="cov-stat">${fmtNum(m.total)}<small>(n=${m.n})</small></span></div>
-      <div class="cov-row"><span class="cov-label">% Cobertura promedio</span><span class="cov-stat">${pctAvg}%<small>(n=${c.n})</small></span></div>
+      <div class="cov-row"><span class="cov-label">N° familias atendidas (total)</span><span class="cov-stat">${fmtNum(a.total)}</span></div>
+      <div class="cov-row"><span class="cov-label">N° familias meta (total)</span><span class="cov-stat">${fmtNum(m.total)}</span></div>
+      <div class="cov-row"><span class="cov-label">% Cobertura promedio</span><span class="cov-stat">${pctAvg}%</span></div>
       <div class="cov-row"><span class="cov-label">Atendidas — promedio por programa</span><span class="cov-stat">${fmtNum(a.avg)}<small>min ${fmtNum(a.min)} · max ${fmtNum(a.max)}</small></span></div>
     </div>
   </div>`;
@@ -599,11 +657,11 @@ function cardPersonnel(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">Totales agregados · ${Math.max(v.n,m.n,t.n)} programas que reportan</div>
+    <div class="card-meta">Totales agregados</div>
     <div class="pers-grid">
-      <div class="pers-block pers-v"><div class="pers-label">Varones</div><div class="pers-num">${fmtNum(v.total)}</div><div class="pers-detail">prom. ${fmtNum(v.avg)} (n=${v.n})</div></div>
-      <div class="pers-block pers-m"><div class="pers-label">Mujeres</div><div class="pers-num">${fmtNum(m.total)}</div><div class="pers-detail">prom. ${fmtNum(m.avg)} (n=${m.n})</div></div>
-      <div class="pers-block pers-t"><div class="pers-label">Total</div><div class="pers-num">${fmtNum(t.total)}</div><div class="pers-detail">prom. ${fmtNum(t.avg)} (n=${t.n})</div></div>
+      <div class="pers-block pers-v"><div class="pers-label">Varones</div><div class="pers-num">${fmtNum(v.total)}</div><div class="pers-detail">prom. ${fmtNum(v.avg)}</div></div>
+      <div class="pers-block pers-m"><div class="pers-label">Mujeres</div><div class="pers-num">${fmtNum(m.total)}</div><div class="pers-detail">prom. ${fmtNum(m.avg)}</div></div>
+      <div class="pers-block pers-t"><div class="pers-label">Total</div><div class="pers-num">${fmtNum(t.total)}</div><div class="pers-detail">prom. ${fmtNum(t.avg)}</div></div>
     </div>
   </div>`;
 }
@@ -628,7 +686,7 @@ function cardTagList(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">${q.items.length} respuestas registradas</div>
+
     <div class="tag-list">${tags}</div>
   </div>`;
 }
@@ -647,7 +705,7 @@ function cardMatrix(q) {
   return `<div class="card span_full">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">${q.items.length} criterios evaluados · respuestas SI / NO</div>
+    <div class="card-meta">criterios evaluados · respuestas SI / NO</div>
     <div class="chart-area" style="height:${hpx}px"><canvas id="${id}"></canvas></div>
   </div>`;
 }
@@ -674,7 +732,7 @@ D.summary.forEach(s => {
   sumRow.innerHTML += `<div class="sum-card">
     <div class="sum-pct">${s.pct}<sub>%</sub></div>
     <div class="sum-q">${s.q}</div>
-    <div class="sum-n">Preg. ${s.num} · n=${s.n}</div>
+    <div class="sum-n">Preg. ${s.num}</div>
   </div>`;
 });
 

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Bash(grep -n \"n=\\\\${\\\\\\\\|\\(n=\\\\\\\\|programas\\\\|reportan\\\\|card-meta\\\\|num-unit\\\\|cov-stat\\\\|pers-detail\")",
+      "Bash(grep -n \"n=\\\\${\\\\\\\\|\\(n=\\\\\\\\|\\\\.n}\\\\\\\\|card-meta\\\\\\\\|card-q\\\\\\\\|respondentes\")",
+      "Bash(grep -n \"summaryRow\\\\|summary\\\\|indicador\\\\|n=\\\\${\" \"C:/Users/Bruno/Desktop/Reporte_ElAlto_Trinidad/el_alto_1a.html\")"
+    ]
+  }
+}

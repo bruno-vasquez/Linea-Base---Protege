@@ -22,9 +22,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --P:#9B2335;
-  --S:#D4956A;
-  --A:#E8B84B;
+  --P:#1B6B2E;
+  --S:#114E22;
+  --A:#D4A520;
   --bg:#F8F7F4;
   --card:#FFFFFF;
   --border:#E4E1DB;
@@ -52,7 +52,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
 .breadcrumb .sep{color:#C9C5BD;font-weight:400}
 .breadcrumb .current{color:var(--text);font-weight:500}
 
-.hero{background:linear-gradient(135deg,#6B1520 0%,#9B2335 55%,#B03A28 100%);color:#fff;padding:56px 60px 48px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#0A3A18 0%,#1B6B2E 55%,#2A8B40 100%);color:#fff;padding:56px 60px 48px;position:relative;overflow:hidden}
 .hero-deco{position:absolute;border-radius:50%;border:50px solid rgba(255,255,255,0.05)}
 .hero-deco.d1{width:400px;height:400px;top:-100px;right:-80px}
 .hero-deco.d2{width:260px;height:260px;bottom:-60px;left:35%}
@@ -168,7 +168,60 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
   .summary-section,.section,.footer,.breadcrumb{padding-left:24px;padding-right:24px}
   .nav{padding:0 24px}
 }
-</style>
+
+/* ── UNICEF PROFESSIONAL ENHANCEMENTS ───────────────────────────── */
+html{scroll-behavior:smooth}
+body{background:linear-gradient(175deg,#EBF3F9 0%,#F8F7F4 320px)}
+
+.site-header{border-top:3px solid #1CABE2;padding-top:9px;box-shadow:0 2px 16px rgba(0,0,0,.07)}
+
+.hero-pill{background:rgba(28,171,226,.25);border-color:rgba(28,171,226,.5)}
+.hero h1{text-shadow:0 2px 16px rgba(0,0,0,.20)}
+
+.summary-section{background:linear-gradient(135deg,#0B2E47 0%,#154360 60%,#1A5A88 100%);border-bottom:none;position:relative;overflow:hidden}
+.summary-section::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1CABE2,rgba(28,171,226,0))}
+.summary-title{color:rgba(255,255,255,.55);letter-spacing:4px}
+.sum-card{border-right-color:rgba(255,255,255,.12)}
+.sum-pct{color:#1CABE2;font-size:38px}
+.sum-pct sub{color:rgba(28,171,226,.8)}
+.sum-q{color:rgba(255,255,255,.82);font-size:11px}
+.sum-n{color:rgba(255,255,255,.35);font-size:9.5px}
+
+.sec-header{background:linear-gradient(135deg,rgba(28,171,226,.07) 0%,transparent 100%);border-bottom:none;border-left:4px solid #1CABE2;border-radius:0 10px 10px 0;padding:14px 20px 14px 22px}
+.sec-roman{color:#1CABE2;font-size:32px}
+.sec-title-text h2{font-size:20px}
+
+.card{border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.04),0 2px 12px rgba(0,0,0,.04);overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 36px rgba(0,0,0,.10),0 2px 8px rgba(0,0,0,.05);border-color:rgba(28,171,226,.35)}
+.card-num{background:linear-gradient(135deg,#EBF3F9,#D6E9F5);color:var(--P);padding:3px 10px;border-radius:20px;font-size:9px;letter-spacing:2px;display:inline-block;margin-bottom:7px;font-weight:700}
+.card-q{font-size:13.5px;font-weight:600}
+.card-meta{font-size:11px;color:var(--muted);margin-bottom:14px;padding-bottom:10px;border-bottom:1px dashed rgba(0,0,0,.08)}
+
+.legend{gap:8px;margin-top:14px;padding-top:12px}
+.leg-item{background:rgba(0,0,0,.03);padding:4px 12px;border-radius:20px;border:1px solid rgba(0,0,0,.07);font-size:11px;font-weight:500;color:var(--text)}
+.leg-swatch{width:8px;height:8px;border-radius:50%}
+
+.stat-ring{box-shadow:0 0 0 4px rgba(21,67,96,.08),0 4px 20px rgba(0,0,0,.10);background:radial-gradient(circle,#fff 62%,rgba(21,67,96,.05))}
+.stat-ring .num{font-size:38px}
+
+.num-block{background:linear-gradient(135deg,#EEF5FA,#fff);border-color:rgba(21,67,96,.12);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.num-big{font-size:30px}
+
+.tag-item{background:linear-gradient(135deg,#EBF3F9,#D6E9F5)!important;color:var(--P)!important;border:1px solid rgba(21,67,96,.18)!important;font-weight:600!important;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+
+.cov-stat{color:var(--P);font-size:20px}
+
+.pers-v{background:linear-gradient(135deg,rgba(84,153,201,.14),rgba(84,153,201,.05))}
+.pers-m{background:linear-gradient(135deg,rgba(155,35,53,.12),rgba(155,35,53,.04))}
+.pers-t{background:linear-gradient(135deg,var(--P),#1A6090)}
+.pers-num{font-size:28px}
+
+.grid{gap:20px}
+
+.footer{background:linear-gradient(135deg,#0B2E47,#154360);color:rgba(255,255,255,.62);border-top:none;margin-top:64px}
+.footer strong{color:#1CABE2}
+.footer .foot-brand svg{opacity:.85}
+/* ──────────────────────────────────────────────────────────────── */</style>
 </head>
 <body>
 
@@ -213,18 +266,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
   <div class="hero-deco d3"></div>
   <div class="hero-flag-wrap">
     <div class="hero-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-  <rect width="60" height="40" fill="#1A4D2E"/>
-  <rect x="0" y="0" width="18" height="40" fill="#A91D2E"/>
-  <g transform="translate(3.5,3.5)" fill="#E1B300" stroke="#B8860B" stroke-width="0.18">
-    <rect x="3.6" y="0" width="2.6" height="10.5" rx="0.2"/>
-    <rect x="0" y="3.6" width="9.8" height="2.6" rx="0.2"/>
-    <rect x="3.2" y="-0.4" width="3.4" height="0.6" fill="#E1B300"/>
-    <rect x="3.2" y="10.3" width="3.4" height="0.6" fill="#E1B300"/>
-    <rect x="-0.4" y="3.2" width="0.6" height="3.4" fill="#E1B300"/>
-    <rect x="9.6" y="3.2" width="0.6" height="3.4" fill="#E1B300"/>
-  </g>
-  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/>
-</svg></div>
+  <rect width="60" height="40" fill="#1B7B35"/>
+  <rect x="0" y="0" width="17" height="15" fill="#C41E1E"/>
+  <rect x="7.3" y="1.8" width="2.4" height="11.4" fill="#E8C010"/>
+  <rect x="2.5" y="5.5" width="12" height="2.4" fill="#E8C010"/>
+  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/></svg></div>
     <div class="hero-flag-lbl">Bandera oficial</div>
   </div>
   <div class="hero-content">
@@ -232,7 +278,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
     <h1>Trinidad</h1>
     <div class="hero-instrument">Estado de Situación – ONGs y Organizaciones Comunitarias</div>
     <div class="hero-pills">
-      <span class="hero-pill">n = 2 respondentes</span>
+      <span class="hero-pill">n = 2 Encuestados</span>
       <span class="hero-pill">Organizaciones Comunitarias</span>
       <span class="hero-pill">58 preguntas · 5 secciones</span>
     </div>
@@ -273,23 +319,23 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
 </div>
 
 <script>
-const D = {"muni": "Trinidad", "slug": "trinidad", "depto": "Beni", "n": 2, "palette": {"primary": "#9B2335", "secondary": "#D4956A", "accent": "#E8B84B", "hero_grad": "linear-gradient(135deg,#6B1520 0%,#9B2335 55%,#B03A28 100%)"}, "instrument": {"id": "1a", "name": "Instrumento Pilar 1a", "subtitle": "Organizaciones Comunitarias", "eyebrow": "Instrumento Pilar 1a Comunitarias", "hero_subtitle": "Estado de Situación – ONGs y Organizaciones Comunitarias", "count_label": "58 preguntas"}, "questions": {"1": {"type": "cat", "num": "1", "title": "¿Su organización implementa programas de prevención de violencia o fortalecimiento familiar?", "categories": ["SI"], "values": [2], "n": 2}, "2": {"type": "multi", "num": "2", "title": "¿Qué tipo de programas implementan?", "categories": ["Ferias de Sensibilización", "Webinares", "Acercamiento con la comunidad", "Grupos de apoyo mutuo para mujeres", "En ciertas comunidades"], "values": [1, 1, 1, 1, 1], "n": 2}, "3": {"type": "ordinal", "num": "3", "title": "¿Cuál fue el nivel de avance?", "categories": ["Medio", "Culminado"], "values": [1, 1], "n": 2}, "3.1": {"type": "tag_list", "num": "3.1", "title": "N° de la anterior respuesta (programas)", "items": ["2"], "n": 1}, "4": {"type": "time_stat", "num": "4", "title": "Tiempo de implementación de los procesos", "anos": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "meses": {"n": 1, "values": [12.0], "avg": 12.0, "min": 12.0, "max": 12.0, "median": 12.0, "total": 12.0}, "sesiones": {"n": 1, "values": [240.0], "avg": 240.0, "min": 240.0, "max": 240.0, "median": 240.0, "total": 240.0}}, "5": {"type": "theme", "num": "5", "title": "¿Qué resultados más importantes obtuvieron? (programas de prevención)", "categories": ["Capacitación y formación", "Acercamiento a la población"], "values": [1, 1], "n": 2}, "5.1": {"type": "cat", "num": "5.1", "title": "¿Su organización implementa servicios de apoyo psicosocial para familias vulnerables?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "6": {"type": "matrix", "num": "6", "title": "Actividades de los Servicios de Apoyo Psicosocial", "items": [{"label": "Se realiza una tipificación de situación de riesgo y vulnerabilidad de las familias", "categories": ["NO"], "values": [1], "n": 1}, {"label": "Se realiza un Perfil Familiar a profundidad", "categories": ["NO"], "values": [1], "n": 1}, {"label": "Se realizan fichas sociales con las características principales de las familias", "categories": ["SI"], "values": [1], "n": 1}, {"label": "Se realizan evaluaciones psicológicas de la situación familiar en general", "categories": ["SI"], "values": [1], "n": 1}, {"label": "Se planean actividades y procesos de monitoreo al abordaje", "categories": ["SI"], "values": [1], "n": 1}]}, "7": {"type": "theme", "num": "7", "title": "¿Cuáles fueron los principales desafíos? (apoyo psicosocial)", "categories": [], "values": [], "n": 0}, "8": {"type": "time_stat", "num": "8", "title": "Tiempo de implementación (apoyo psicosocial)", "anos": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "meses": {"n": 1, "values": [12.0], "avg": 12.0, "min": 12.0, "max": 12.0, "median": 12.0, "total": 12.0}, "sesiones": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}}, "9": {"type": "theme", "num": "9", "title": "¿Qué resultados más importantes obtuvieron? (apoyo psicosocial)", "categories": [], "values": [], "n": 0}, "10": {"type": "matrix", "num": "10", "title": "Criterios para prevenir situaciones de violencia", "items": [{"label": "Promueve crianza positiva", "categories": ["SI"], "values": [1], "n": 1}, {"label": "Reduce factores de riesgo", "categories": ["SI"], "values": [2], "n": 2}, {"label": "Incluye apoyo psicosocial", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, {"label": "Fortalece participación de NNA", "categories": ["SI"], "values": [2], "n": 2}, {"label": "Promueve el bienestar integral de los NNA dentro de sus familias y comunidad", "categories": ["SI"], "values": [2], "n": 2}, {"label": "Mejora el bienestar emocional de las madres, padres y cuidadores", "categories": ["SI"], "values": [2], "n": 2}, {"label": "Promueve el ejercicio de los derechos de los NNA y sus familias", "categories": ["SI"], "values": [2], "n": 2}]}, "11": {"type": "cat", "num": "11", "title": "¿Se aplican metodologías desarrolladas por otras organizaciones?", "categories": ["NO"], "values": [2], "n": 2}, "12": {"type": "tag_list", "num": "12", "title": "Organizaciones y metodologías aplicadas", "items": [], "n": 0}, "13": {"type": "cat", "num": "13", "title": "¿Se realizó alguna adaptación?", "categories": ["NO"], "values": [1], "n": 1}, "14": {"type": "theme", "num": "14", "title": "¿Cómo se realizaron estas adaptaciones?", "categories": [], "values": [], "n": 0}, "15": {"type": "ordinal", "num": "15", "title": "¿Se promueve la participación de los NNA en las iniciativas familiares o comunitarias?", "categories": ["A veces", "Siempre"], "values": [1, 1], "n": 2}, "16": {"type": "theme", "num": "16", "title": "¿Cómo fueron recibidos estos programas o estrategias por la población?", "categories": ["Buena aceptación", "En función de necesidades"], "values": [1, 1], "n": 2}, "17": {"type": "multi", "num": "17", "title": "Organizaciones con las que se coordinan proyectos o estrategias", "categories": ["Gobierno Municipal", "SEDEGES / DNNA", "Org. Social Comunitaria", "Gobierno Departamental", "Junta de Vecinos", "Promotoras comunitarias", "Gobierno Nacional", "ONG"], "values": [2, 2, 2, 1, 1, 1, 1, 1], "n": 2}, "18": {"type": "theme", "num": "18", "title": "¿Cómo es la coordinación con las organizaciones mencionadas?", "categories": ["Buena / Directa"], "values": [1], "n": 1}, "19": {"type": "theme", "num": "19", "title": "¿Cuáles son los obstáculos en la coordinación con algunas instituciones?", "categories": ["Sin obstáculos"], "values": [1], "n": 1}, "20": {"type": "theme", "num": "20", "title": "¿Cuáles son las principales Fortalezas que tiene el municipio?", "categories": ["Acercamiento a la comunidad", "Apoyo de autoridades"], "values": [1, 1], "n": 2}, "21": {"type": "theme", "num": "21", "title": "¿Cuáles son las principales debilidades?", "categories": ["Cobertura territorial limitada"], "values": [2], "n": 2}, "22": {"type": "multi", "num": "22", "title": "¿Qué grupos etarios cubre el programa?", "categories": ["13-17 Adolescencia", "6-12 Niñez"], "values": [2, 1], "n": 2}, "23": {"type": "multi", "num": "23", "title": "¿Qué población alcanza?", "categories": ["Urbano", "Rural", "Indígena"], "values": [2, 1, 1], "n": 2}, "24": {"type": "coverage", "num": "24", "title": "Familias Participantes", "atendidas": {"n": 1, "values": [114.0], "avg": 114.0, "min": 114.0, "max": 114.0, "median": 114.0, "total": 114.0}, "meta": {"n": 1, "values": [350.0], "avg": 350.0, "min": 350.0, "max": 350.0, "median": 350.0, "total": 350.0}, "cobertura": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}}, "25": {"type": "cat", "num": "25", "title": "¿Los programas o estrategias incluyen mecanismos de seguimiento para medir su alcance?", "categories": ["SI"], "values": [2], "n": 2}, "26": {"type": "theme", "num": "26", "title": "¿Qué mecanismos o herramientas utiliza para realizar el seguimiento?", "categories": ["Línea de base / Impacto", "Protocolos y rutas"], "values": [1, 1], "n": 2}, "27": {"type": "cat", "num": "27", "title": "¿Se utilizan metodologías participativas y lúdicas?", "categories": ["SI"], "values": [2], "n": 2}, "28": {"type": "cat", "num": "28", "title": "¿Se utilizan materiales estandarizados (láminas, guías, mochilas, manuales)?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "29": {"type": "cat", "num": "29", "title": "¿Los contenidos están adaptados culturalmente?", "categories": ["SI"], "values": [2], "n": 2}, "30": {"type": "multi", "num": "30", "title": "¿Qué temáticas se abordan?", "categories": ["Comunicación asertiva", "Prevención de la violencia", "Resolución de Conflictos", "Participación de los NNAs", "Salud mental del cuidador/a", "Uso de Tecnologías, internet y redes.", "Fortalecimiento del Vinculo y apego"], "values": [2, 2, 2, 2, 1, 1, 1], "n": 2}, "30.1": {"type": "ordinal", "num": "30.1", "title": "¿Cuál es el estado de los materiales disponibles para los programas?", "categories": ["Bueno"], "values": [2], "n": 2}, "31.1": {"type": "personnel", "num": "31.1", "title": "Personal/voluntario activo en los programas", "varones": {"n": 1, "values": [2.0], "avg": 2.0, "min": 2.0, "max": 2.0, "median": 2.0, "total": 2.0}, "mujeres": {"n": 1, "values": [10.0], "avg": 10.0, "min": 10.0, "max": 10.0, "median": 10.0, "total": 10.0}, "total": {"n": 1, "values": [12.0], "avg": 12.0, "min": 12.0, "max": 12.0, "median": 12.0, "total": 12.0}}, "31.2": {"type": "personnel", "num": "31.2", "title": "Facilitadores formados en crianza positiva / fortalecimiento familiar", "varones": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "mujeres": {"n": 1, "values": [3.0], "avg": 3.0, "min": 3.0, "max": 3.0, "median": 3.0, "total": 3.0}, "total": {"n": 1, "values": [3.0], "avg": 3.0, "min": 3.0, "max": 3.0, "median": 3.0, "total": 3.0}}, "31.3": {"type": "personnel", "num": "31.3", "title": "Personal del municipio capacitado en el enfoque", "varones": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "mujeres": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "total": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}}, "31.4": {"type": "cat", "num": "31.4", "title": "¿Su organización cuenta con sistemas de monitoreo y registro de casos?", "categories": ["SI"], "values": [1], "n": 1}, "31.4.1": {"type": "tag_list", "num": "31.4.1", "title": "Nombres de los sistemas de monitoreo", "items": ["Registro único de casos"], "n": 1}, "32": {"type": "tag_list", "num": "32", "title": "¿Qué aspectos monitorea?", "items": ["La situación actual de mujeres y adolescentes en situación de violencia"], "n": 1}, "33": {"type": "multi", "num": "33", "title": "Instituciones que participan en la atención de NNA en situación de violencia", "categories": ["Defensoría Niñez y Adolescencia (DNA)", "Policía Nacional / FELCV", "Juzgado de la Niñez y Adolescencia", "Centros de Acogida (Privados)", "UNICEF"], "values": [2, 2, 2, 1, 1], "n": 2}, "34": {"type": "cat", "num": "34", "title": "¿La DNA lidera o coordina en procesos interinstitucionales?", "categories": ["SI", "Parcialmente"], "values": [1, 1], "n": 2}, "35.1": {"type": "multi", "num": "35.1", "title": "Áreas con puntos focales de protección infantil", "categories": ["Salud"], "values": [1], "n": 1}, "35.2": {"type": "tag_list", "num": "35.2", "title": "Puntos focales en Salud", "items": ["Promotoras comunitarios"], "n": 1}, "35.3": {"type": "tag_list", "num": "35.3", "title": "Puntos focales en Educación", "items": [], "n": 0}, "36": {"type": "cat", "num": "36", "title": "¿Existen mecanismos escolares de detección y referencia de casos de violencia contra NNA?", "categories": ["SI", "Parcialmente"], "values": [1, 1], "n": 2}, "37": {"type": "cat", "num": "37", "title": "¿Existen enlaces entre las organizaciones y la fiscalía/policía?", "categories": ["SI", "Parcialmente"], "values": [1, 1], "n": 2}, "38": {"type": "cat", "num": "38", "title": "¿Existen comités de NNA?", "categories": ["SI"], "values": [2], "n": 2}, "39": {"type": "cat", "num": "39", "title": "¿Este comité está relacionado con violencia contra NNA o protección?", "categories": ["NO"], "values": [1], "n": 1}, "40": {"type": "cat", "num": "40", "title": "¿Existen Redes/mesas Interinstitucionales sobre violencia contra NNA en el municipio?", "categories": ["SI"], "values": [1], "n": 1}, "41": {"type": "cat", "num": "41", "title": "¿Cuentan con resolución o norma?", "categories": [], "values": [], "n": 0}, "42": {"type": "multi", "num": "42", "title": "Quiénes participan en estas redes o mesas interinstitucionales", "categories": ["Salud", "Protección (DNA, Policía, Juzgados)", "Promotores / Líderes Comunitarios", "Organizaciones Sociales", "ONG"], "values": [1, 1, 1, 1, 1], "n": 1}, "43": {"type": "cat", "num": "43", "title": "¿Existen rutas escritas de derivación entre las organizaciones?", "categories": ["SI"], "values": [1], "n": 1}, "44": {"type": "ordinal", "num": "44", "title": "¿Las instituciones utilizan las rutas?", "categories": ["Siempre"], "values": [1], "n": 1}, "45": {"type": "cat", "num": "45", "title": "¿Existen procesos de referencia y contrarreferencia documentada?", "categories": ["SI"], "values": [1], "n": 1}, "46": {"type": "num_simple", "num": "46", "title": "Tiempo de respuesta en coordinación institucional", "unit": "días", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "47": {"type": "cat", "num": "47", "title": "¿Existen reuniones de análisis de casos?", "categories": ["SI"], "values": [1], "n": 1}, "48.1": {"type": "cat", "num": "48.1", "title": "¿Cada institución registra casos de violencia?", "categories": ["SI"], "values": [2], "n": 2}, "48.2": {"type": "theme", "num": "48.2", "title": "¿Cómo se registran los casos?", "categories": ["Libro / Fichas / Historia clínica"], "values": [2], "n": 2}, "49": {"type": "cat", "num": "49", "title": "¿Existe base de datos municipal integrada sobre violencia contra NNA?", "categories": ["NO"], "values": [2], "n": 2}, "50": {"type": "cat", "num": "50", "title": "¿Se presentan datos en espacios de coordinación interinstitucional?", "categories": ["NO"], "values": [2], "n": 2}, "51": {"type": "cat", "num": "51", "title": "¿Se analizan tendencias territoriales de vulnerabilidad/riesgo o violencia contra NNA?", "categories": ["NO"], "values": [2], "n": 2}, "52": {"type": "cat", "num": "52", "title": "¿En el municipio se identifican zonas o grupos de riesgo?", "categories": ["NO"], "values": [2], "n": 2}, "53": {"type": "cat", "num": "53", "title": "¿Actores clave/Promotores aportan datos comunitarios sobre violencia o riesgo?", "categories": ["NO"], "values": [1], "n": 1}, "54.1": {"type": "cat", "num": "54.1", "title": "¿Los programas de intervención familiar derivan casos a la DNA?", "categories": ["SI"], "values": [1], "n": 1}, "54.2": {"type": "theme", "num": "54.2", "title": "¿Cómo derivan los casos a la DNA?", "categories": ["Fichas de derivación / Coordinación"], "values": [1], "n": 1}, "55": {"type": "cat", "num": "55", "title": "¿Actores clave/Promotores activan rutas o derivan casos de violencia contra NNA?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "56": {"type": "cat", "num": "56", "title": "¿La DNA participa en espacios comunitarios?", "categories": ["SI"], "values": [2], "n": 2}, "57": {"type": "cat", "num": "57", "title": "¿Existe retroalimentación entre programas y servicios de familias/NNA?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "58.1": {"type": "cat", "num": "58.1", "title": "¿Las y los NNA participan en análisis o propuestas del sistema de protección?", "categories": ["SI"], "values": [2], "n": 2}, "58.2": {"type": "theme", "num": "58.2", "title": "¿Cómo participan los NNA?", "categories": ["Comités y mesas municipales", "Estrategias de protección comunitaria"], "values": [1, 1], "n": 2}, "59": {"type": "cat", "num": "59", "title": "¿Se analizan datos diferenciados por sexo y edad en la red interinstitucional/municipal?", "categories": ["NO"], "values": [1], "n": 1}, "60": {"type": "cat", "num": "60", "title": "¿Se identifican riesgos específicos para niñas, niños y adolescentes?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}}, "sections": [{"title": "EXISTENCIA DE PROGRAMAS", "qkeys": ["1", "2", "3", "3.1", "4", "5", "5.1", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]}, {"title": "ALCANCE Y COBERTURA", "qkeys": ["22", "23", "24", "25", "26"]}, {"title": "CONTENIDOS Y METODOLOGÍAS", "qkeys": ["27", "28", "29", "30"]}, {"title": "RECURSOS HUMANOS Y MATERIALES", "qkeys": ["30.1", "31.1", "31.2", "31.3", "31.4", "31.4.1", "32"]}, {"title": "REDES INTERINSTITUCIONALES", "qkeys": ["33", "34", "35.1", "35.2", "35.3", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48.1", "48.2", "49", "50", "51", "52", "53", "54.1", "54.2", "55", "56", "57", "58.1", "58.2", "59", "60"]}], "summary": [{"q": "Implementan programas", "pct": 100, "n": 2, "num": "1"}, {"q": "Apoyo psicosocial", "pct": 50, "n": 2, "num": "5.1"}, {"q": "Mecanismos de seguimiento", "pct": 100, "n": 2, "num": "25"}, {"q": "Metodologías participativas", "pct": 100, "n": 2, "num": "27"}, {"q": "Adaptación cultural", "pct": 100, "n": 2, "num": "29"}, {"q": "Sistema de monitoreo", "pct": 100, "n": 1, "num": "31.4"}, {"q": "DNA lidera coordinación", "pct": 50, "n": 2, "num": "34"}, {"q": "Enlaces fiscalía/policía", "pct": 50, "n": 2, "num": "37"}, {"q": "Redes interinstitucionales", "pct": 100, "n": 1, "num": "40"}, {"q": "Rutas escritas derivación", "pct": 100, "n": 1, "num": "43"}]};
+const D = {"muni": "Trinidad", "slug": "trinidad", "depto": "Beni", "n": 2, "palette": {"primary": "#1B6B2E", "secondary": "#114E22", "accent": "#D4A520", "hero_grad": "linear-gradient(135deg,#0A3A18 0%,#1B6B2E 55%,#2A8B40 100%)"}, "instrument": {"id": "1a", "name": "Instrumento Pilar 1a", "subtitle": "Organizaciones Comunitarias", "eyebrow": "Instrumento Pilar 1a Comunitarias", "hero_subtitle": "Estado de Situación – ONGs y Organizaciones Comunitarias", "count_label": "58 preguntas"}, "questions": {"1": {"type": "cat", "num": "1", "title": "¿Su organización implementa programas de prevención de violencia o fortalecimiento familiar?", "categories": ["SI"], "values": [2], "n": 2}, "2": {"type": "multi", "num": "2", "title": "¿Qué tipo de programas implementan?", "categories": ["Ferias de Sensibilización", "Webinares", "Acercamiento con la comunidad", "Grupos de apoyo mutuo para mujeres", "En ciertas comunidades"], "values": [1, 1, 1, 1, 1], "n": 2}, "3": {"type": "ordinal", "num": "3", "title": "¿Cuál fue el nivel de avance?", "categories": ["Medio", "Culminado"], "values": [1, 1], "n": 2}, "3.1": {"type": "tag_list", "num": "3.1", "title": "N° de la anterior respuesta (programas)", "items": ["2"], "n": 1}, "4": {"type": "time_stat", "num": "4", "title": "Tiempo de implementación de los procesos", "anos": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "meses": {"n": 1, "values": [12.0], "avg": 12.0, "min": 12.0, "max": 12.0, "median": 12.0, "total": 12.0}, "sesiones": {"n": 1, "values": [240.0], "avg": 240.0, "min": 240.0, "max": 240.0, "median": 240.0, "total": 240.0}}, "5": {"type": "theme", "num": "5", "title": "¿Qué resultados más importantes obtuvieron? (programas de prevención)", "categories": ["Capacitación y formación", "Acercamiento a la población"], "values": [1, 1], "n": 2}, "5.1": {"type": "cat", "num": "5.1", "title": "¿Su organización implementa servicios de apoyo psicosocial para familias vulnerables?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "6": {"type": "matrix", "num": "6", "title": "Actividades de los Servicios de Apoyo Psicosocial", "items": [{"label": "Se realiza una tipificación de situación de riesgo y vulnerabilidad de las familias", "categories": ["NO"], "values": [1], "n": 1}, {"label": "Se realiza un Perfil Familiar a profundidad", "categories": ["NO"], "values": [1], "n": 1}, {"label": "Se realizan fichas sociales con las características principales de las familias", "categories": ["SI"], "values": [1], "n": 1}, {"label": "Se realizan evaluaciones psicológicas de la situación familiar en general", "categories": ["SI"], "values": [1], "n": 1}, {"label": "Se planean actividades y procesos de monitoreo al abordaje", "categories": ["SI"], "values": [1], "n": 1}]}, "7": {"type": "theme", "num": "7", "title": "¿Cuáles fueron los principales desafíos? (apoyo psicosocial)", "categories": [], "values": [], "n": 0}, "8": {"type": "time_stat", "num": "8", "title": "Tiempo de implementación (apoyo psicosocial)", "anos": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "meses": {"n": 1, "values": [12.0], "avg": 12.0, "min": 12.0, "max": 12.0, "median": 12.0, "total": 12.0}, "sesiones": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}}, "9": {"type": "theme", "num": "9", "title": "¿Qué resultados más importantes obtuvieron? (apoyo psicosocial)", "categories": [], "values": [], "n": 0}, "10": {"type": "matrix", "num": "10", "title": "Criterios para prevenir situaciones de violencia", "items": [{"label": "Promueve crianza positiva", "categories": ["SI"], "values": [1], "n": 1}, {"label": "Reduce factores de riesgo", "categories": ["SI"], "values": [2], "n": 2}, {"label": "Incluye apoyo psicosocial", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, {"label": "Fortalece participación de NNA", "categories": ["SI"], "values": [2], "n": 2}, {"label": "Promueve el bienestar integral de los NNA dentro de sus familias y comunidad", "categories": ["SI"], "values": [2], "n": 2}, {"label": "Mejora el bienestar emocional de las madres, padres y cuidadores", "categories": ["SI"], "values": [2], "n": 2}, {"label": "Promueve el ejercicio de los derechos de los NNA y sus familias", "categories": ["SI"], "values": [2], "n": 2}]}, "11": {"type": "cat", "num": "11", "title": "¿Se aplican metodologías desarrolladas por otras organizaciones?", "categories": ["NO"], "values": [2], "n": 2}, "12": {"type": "tag_list", "num": "12", "title": "Organizaciones y metodologías aplicadas", "items": [], "n": 0}, "13": {"type": "cat", "num": "13", "title": "¿Se realizó alguna adaptación?", "categories": ["NO"], "values": [1], "n": 1}, "14": {"type": "theme", "num": "14", "title": "¿Cómo se realizaron estas adaptaciones?", "categories": [], "values": [], "n": 0}, "15": {"type": "ordinal", "num": "15", "title": "¿Se promueve la participación de los NNA en las iniciativas familiares o comunitarias?", "categories": ["A veces", "Siempre"], "values": [1, 1], "n": 2}, "16": {"type": "theme", "num": "16", "title": "¿Cómo fueron recibidos estos programas o estrategias por la población?", "categories": ["Buena aceptación", "En función de necesidades"], "values": [1, 1], "n": 2}, "17": {"type": "multi", "num": "17", "title": "Organizaciones con las que se coordinan proyectos o estrategias", "categories": ["Gobierno Municipal", "SEDEGES / DNNA", "Org. Social Comunitaria", "Gobierno Departamental", "Junta de Vecinos", "Promotoras comunitarias", "Gobierno Nacional", "ONG"], "values": [2, 2, 2, 1, 1, 1, 1, 1], "n": 2}, "18": {"type": "theme", "num": "18", "title": "¿Cómo es la coordinación con las organizaciones mencionadas?", "categories": ["Buena / Directa"], "values": [1], "n": 1}, "19": {"type": "theme", "num": "19", "title": "¿Cuáles son los obstáculos en la coordinación con algunas instituciones?", "categories": ["Sin obstáculos"], "values": [1], "n": 1}, "20": {"type": "theme", "num": "20", "title": "¿Cuáles son las principales Fortalezas que tiene el municipio?", "categories": ["Acercamiento a la comunidad", "Apoyo de autoridades"], "values": [1, 1], "n": 2}, "21": {"type": "theme", "num": "21", "title": "¿Cuáles son las principales debilidades?", "categories": ["Cobertura territorial limitada"], "values": [2], "n": 2}, "22": {"type": "multi", "num": "22", "title": "¿Qué grupos etarios cubre el programa?", "categories": ["13-17 Adolescencia", "6-12 Niñez"], "values": [2, 1], "n": 2}, "23": {"type": "multi", "num": "23", "title": "¿Qué población alcanza?", "categories": ["Urbano", "Rural", "Indígena"], "values": [2, 1, 1], "n": 2}, "24": {"type": "coverage", "num": "24", "title": "Familias Participantes", "atendidas": {"n": 1, "values": [114.0], "avg": 114.0, "min": 114.0, "max": 114.0, "median": 114.0, "total": 114.0}, "meta": {"n": 1, "values": [350.0], "avg": 350.0, "min": 350.0, "max": 350.0, "median": 350.0, "total": 350.0}, "cobertura": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}}, "25": {"type": "cat", "num": "25", "title": "¿Los programas o estrategias incluyen mecanismos de seguimiento para medir su alcance?", "categories": ["SI"], "values": [2], "n": 2}, "26": {"type": "theme", "num": "26", "title": "¿Qué mecanismos o herramientas utiliza para realizar el seguimiento?", "categories": ["Línea de base / Impacto", "Protocolos y rutas"], "values": [1, 1], "n": 2}, "27": {"type": "cat", "num": "27", "title": "¿Se utilizan metodologías participativas y lúdicas?", "categories": ["SI"], "values": [2], "n": 2}, "28": {"type": "cat", "num": "28", "title": "¿Se utilizan materiales estandarizados (láminas, guías, mochilas, manuales)?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "29": {"type": "cat", "num": "29", "title": "¿Los contenidos están adaptados culturalmente?", "categories": ["SI"], "values": [2], "n": 2}, "30": {"type": "multi", "num": "30", "title": "¿Qué temáticas se abordan?", "categories": ["Comunicación asertiva", "Prevención de la violencia", "Resolución de Conflictos", "Participación de los NNAs", "Salud mental del cuidador/a", "Uso de Tecnologías, internet y redes.", "Fortalecimiento del Vinculo y apego"], "values": [2, 2, 2, 2, 1, 1, 1], "n": 2}, "30.1": {"type": "ordinal", "num": "30.1", "title": "¿Cuál es el estado de los materiales disponibles para los programas?", "categories": ["Bueno"], "values": [2], "n": 2}, "31.1": {"type": "personnel", "num": "31.1", "title": "Personal/voluntario activo en los programas", "varones": {"n": 1, "values": [2.0], "avg": 2.0, "min": 2.0, "max": 2.0, "median": 2.0, "total": 2.0}, "mujeres": {"n": 1, "values": [10.0], "avg": 10.0, "min": 10.0, "max": 10.0, "median": 10.0, "total": 10.0}, "total": {"n": 1, "values": [12.0], "avg": 12.0, "min": 12.0, "max": 12.0, "median": 12.0, "total": 12.0}}, "31.2": {"type": "personnel", "num": "31.2", "title": "Facilitadores formados en crianza positiva / Fortalecimiento familiar", "varones": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "mujeres": {"n": 1, "values": [3.0], "avg": 3.0, "min": 3.0, "max": 3.0, "median": 3.0, "total": 3.0}, "total": {"n": 1, "values": [3.0], "avg": 3.0, "min": 3.0, "max": 3.0, "median": 3.0, "total": 3.0}}, "31.3": {"type": "personnel", "num": "31.3", "title": "Personal del municipio capacitado en el enfoque", "varones": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "mujeres": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "total": {"n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}}, "31.4": {"type": "cat", "num": "31.4", "title": "¿Su organización cuenta con sistemas de monitoreo y registro de casos?", "categories": ["SI"], "values": [1], "n": 1}, "31.4.1": {"type": "tag_list", "num": "31.4.1", "title": "Nombres de los sistemas de monitoreo", "items": ["Registro único de casos"], "n": 1}, "32": {"type": "tag_list", "num": "32", "title": "¿Qué aspectos monitorea?", "items": ["La situación actual de mujeres y adolescentes en situación de violencia"], "n": 1}, "33": {"type": "multi", "num": "33", "title": "Instituciones que participan en la atención de NNA en situación de violencia", "categories": ["Defensoría Niñez y Adolescencia (DNA)", "Policía Nacional / FELCV", "Juzgado de la Niñez y Adolescencia", "Centros de Acogida (Privados)", "UNICEF"], "values": [2, 2, 2, 1, 1], "n": 2}, "34": {"type": "cat", "num": "34", "title": "¿La DNA lidera o coordina en procesos interinstitucionales?", "categories": ["SI", "Parcialmente"], "values": [1, 1], "n": 2}, "35.1": {"type": "multi", "num": "35.1", "title": "Áreas con puntos focales de protección infantil", "categories": ["Salud"], "values": [1], "n": 1}, "35.2": {"type": "tag_list", "num": "35.2", "title": "Puntos focales en Salud", "items": ["Promotoras comunitarios"], "n": 1}, "35.3": {"type": "tag_list", "num": "35.3", "title": "Puntos focales en Educación", "items": [], "n": 0}, "36": {"type": "cat", "num": "36", "title": "¿Existen mecanismos escolares de detección y referencia de casos de violencia contra NNA?", "categories": ["SI", "Parcialmente"], "values": [1, 1], "n": 2}, "37": {"type": "cat", "num": "37", "title": "¿Existen enlaces entre las organizaciones y la fiscalía/policía?", "categories": ["SI", "Parcialmente"], "values": [1, 1], "n": 2}, "38": {"type": "cat", "num": "38", "title": "¿Existen comités de NNA?", "categories": ["SI"], "values": [2], "n": 2}, "39": {"type": "cat", "num": "39", "title": "¿Este comité está relacionado con violencia contra NNA o protección?", "categories": ["NO"], "values": [1], "n": 1}, "40": {"type": "cat", "num": "40", "title": "¿Existen Redes/mesas Interinstitucionales sobre violencia contra NNA en el municipio?", "categories": ["SI"], "values": [1], "n": 1}, "41": {"type": "cat", "num": "41", "title": "¿Cuentan con resolución o norma?", "categories": [], "values": [], "n": 0}, "42": {"type": "multi", "num": "42", "title": "Quiénes participan en estas redes o mesas interinstitucionales", "categories": ["Salud", "Protección (DNA, Policía, Juzgados)", "Promotores / Líderes Comunitarios", "Organizaciones Sociales", "ONG"], "values": [1, 1, 1, 1, 1], "n": 1}, "43": {"type": "cat", "num": "43", "title": "¿Existen rutas escritas de derivación entre las organizaciones?", "categories": ["SI"], "values": [1], "n": 1}, "44": {"type": "ordinal", "num": "44", "title": "¿Las instituciones utilizan las rutas?", "categories": ["Siempre"], "values": [1], "n": 1}, "45": {"type": "cat", "num": "45", "title": "¿Existen procesos de referencia y contrarreferencia documentada?", "categories": ["SI"], "values": [1], "n": 1}, "46": {"type": "num_simple", "num": "46", "title": "Tiempo de respuesta en coordinación institucional", "unit": "días", "n": 0, "values": [], "avg": 0, "min": 0, "max": 0, "total": 0, "median": 0}, "47": {"type": "cat", "num": "47", "title": "¿Existen reuniones de análisis de casos?", "categories": ["SI"], "values": [1], "n": 1}, "48.1": {"type": "cat", "num": "48.1", "title": "¿Cada institución registra casos de violencia?", "categories": ["SI"], "values": [2], "n": 2}, "48.2": {"type": "theme", "num": "48.2", "title": "¿Cómo se registran los casos?", "categories": ["Libro / Fichas / Historia clínica"], "values": [2], "n": 2}, "49": {"type": "cat", "num": "49", "title": "¿Existe base de datos municipal integrada sobre violencia contra NNA?", "categories": ["NO"], "values": [2], "n": 2}, "50": {"type": "cat", "num": "50", "title": "¿Se presentan datos en espacios de coordinación interinstitucional?", "categories": ["NO"], "values": [2], "n": 2}, "51": {"type": "cat", "num": "51", "title": "¿Se analizan tendencias territoriales de vulnerabilidad/riesgo o violencia contra NNA?", "categories": ["NO"], "values": [2], "n": 2}, "52": {"type": "cat", "num": "52", "title": "¿En el municipio se identifican zonas o grupos de riesgo?", "categories": ["NO"], "values": [2], "n": 2}, "53": {"type": "cat", "num": "53", "title": "¿Actores clave/Promotores aportan datos comunitarios sobre violencia o riesgo?", "categories": ["NO"], "values": [1], "n": 1}, "54.1": {"type": "cat", "num": "54.1", "title": "¿Los programas de intervención familiar derivan casos a la DNA?", "categories": ["SI"], "values": [1], "n": 1}, "54.2": {"type": "theme", "num": "54.2", "title": "¿Cómo derivan los casos a la DNA?", "categories": ["Fichas de derivación / Coordinación"], "values": [1], "n": 1}, "55": {"type": "cat", "num": "55", "title": "¿Actores clave/Promotores activan rutas o derivan casos de violencia contra NNA?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "56": {"type": "cat", "num": "56", "title": "¿La DNA participa en espacios comunitarios?", "categories": ["SI"], "values": [2], "n": 2}, "57": {"type": "cat", "num": "57", "title": "¿Existe retroalimentación entre programas y servicios de familias/NNA?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}, "58.1": {"type": "cat", "num": "58.1", "title": "¿Las y los NNA participan en análisis o propuestas del sistema de protección?", "categories": ["SI"], "values": [2], "n": 2}, "58.2": {"type": "theme", "num": "58.2", "title": "¿Cómo participan los NNA?", "categories": ["Comités y mesas municipales", "Estrategias de protección comunitaria"], "values": [1, 1], "n": 2}, "59": {"type": "cat", "num": "59", "title": "¿Se analizan datos diferenciados por sexo y edad en la red interinstitucional/municipal?", "categories": ["NO"], "values": [1], "n": 1}, "60": {"type": "cat", "num": "60", "title": "¿Se identifican riesgos específicos para niñas, niños y adolescentes?", "categories": ["SI", "NO"], "values": [1, 1], "n": 2}}, "sections": [{"title": "EXISTENCIA DE PROGRAMAS", "qkeys": ["1", "2", "3", "3.1", "4", "5", "5.1", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]}, {"title": "ALCANCE Y COBERTURA", "qkeys": ["22", "23", "24", "25", "26"]}, {"title": "CONTENIDOS Y METODOLOGÍAS", "qkeys": ["27", "28", "29", "30"]}, {"title": "RECURSOS HUMANOS Y MATERIALES", "qkeys": ["30.1", "31.1", "31.2", "31.3", "31.4", "31.4.1", "32"]}, {"title": "REDES INTERINSTITUCIONALES", "qkeys": ["33", "34", "35.1", "35.2", "35.3", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48.1", "48.2", "49", "50", "51", "52", "53", "54.1", "54.2", "55", "56", "57", "58.1", "58.2", "59", "60"]}], "summary": [{"q": "Implementan programas", "pct": 100, "n": 2, "num": "1"}, {"q": "Apoyo psicosocial", "pct": 50, "n": 2, "num": "5.1"}, {"q": "Mecanismos de seguimiento", "pct": 100, "n": 2, "num": "25"}, {"q": "Metodologías participativas", "pct": 100, "n": 2, "num": "27"}, {"q": "Adaptación cultural", "pct": 100, "n": 2, "num": "29"}, {"q": "Sistema de monitoreo", "pct": 100, "n": 1, "num": "31.4"}, {"q": "DNA lidera coordinación", "pct": 50, "n": 2, "num": "34"}, {"q": "Enlaces fiscalía/policía", "pct": 50, "n": 2, "num": "37"}, {"q": "Redes interinstitucionales", "pct": 100, "n": 1, "num": "40"}, {"q": "Rutas escritas derivación", "pct": 100, "n": 1, "num": "43"}]};
 const PRIMARY = D.palette.primary;
 const SECONDARY = D.palette.secondary;
 
 const CAT_COLORS = {
   'SI':PRIMARY, 'NO':'#B5B0A8',
   'Sí':PRIMARY, 'sí':PRIMARY, 'Si':PRIMARY,
-  'Parcialmente':SECONDARY,
-  'Culminado':'#27AE60', 'Medio':SECONDARY, 'Inicial':'#E67E22',
-  'Bueno':'#27AE60', 'Regular':SECONDARY,
+  'Parcialmente':'#E67E22',
+  'Culminado':'#27AE60', 'Medio':'#E67E22', 'Inicial':'#E74C3C',
+  'Bueno':'#27AE60', 'Regular':'#E67E22',
   'Malo':'#E74C3C', 'Mala':'#E74C3C',
-  'Siempre':'#27AE60', 'A veces':SECONDARY, 'Nunca':'#E74C3C',
+  'Siempre':'#27AE60', 'A veces':'#E67E22', 'Nunca':'#E74C3C',
   'Muy Buena':'#27AE60', 'Buena':'#82E0AA',
   'Alto':'#27AE60', 'Bajo':'#E74C3C', 'Ninguno':'#B5B0A8',
 };
 
-const THEME_PALETTE = [PRIMARY, SECONDARY, '#5499C9', '#27AE60', '#E67E22', '#8E44AD', '#16A085', '#C0392B', '#7F8C8D'];
+const THEME_PALETTE = [PRIMARY, '#2980B9', '#D4A520', '#27AE60', '#E67E22', '#8E44AD', '#16A085', '#C0392B', '#7F8C8D'];
 
 let cid = 0;
 const uid = () => 'c' + (cid++);
@@ -323,6 +369,7 @@ const valueLabelsPlugin = {
     ctx.textAlign = 'left';
     chart.data.datasets.forEach((dataset, i) => {
       const meta = chart.getDatasetMeta(i);
+      const numDs = chart.data.datasets.length;
       meta.data.forEach((bar, idx) => {
         const value = dataset.data[idx];
         if (value > 0 && bar && bar.x != null) {
@@ -333,7 +380,11 @@ const valueLabelsPlugin = {
             color = dataset.backgroundColor || '#333';
           }
           ctx.fillStyle = color;
-          ctx.fillText(value, bar.x + 6, bar.y);
+          const total = numDs > 1
+            ? chart.data.datasets.reduce((a,d)=>a+(d.data[idx]||0),0)||1
+            : dataset.data.reduce((a,b)=>a+b,0)||1;
+          const pct = Math.round(value/total*100);
+          ctx.fillText(`${pct}%`, bar.x + 6, bar.y);
         }
       });
     });
@@ -345,7 +396,7 @@ function renderDoughnut(id, cats, vals) {
   const ctx = document.getElementById(id)?.getContext('2d'); if(!ctx) return;
   new Chart(ctx, { type:'doughnut', data:{
     labels:cats,
-    datasets:[{data:vals, backgroundColor:cats.map(c=>CAT_COLORS[c]||PRIMARY),
+    datasets:[{data:vals, backgroundColor:cats.map((c,i)=>CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length]),
                borderWidth:2,borderColor:'#fff',hoverOffset:8}]
   }, options:{
     cutout:'62%', responsive:true, maintainAspectRatio:false,
@@ -359,7 +410,7 @@ function renderPie(id, cats, vals) {
   const ctx = document.getElementById(id)?.getContext('2d'); if(!ctx) return;
   new Chart(ctx, { type:'pie', data:{
     labels:cats,
-    datasets:[{data:vals, backgroundColor:cats.map(c=>CAT_COLORS[c]||PRIMARY),
+    datasets:[{data:vals, backgroundColor:cats.map((c,i)=>CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length]),
                borderWidth:2,borderColor:'#fff',hoverOffset:8}]
   }, options:{
     responsive:true, maintainAspectRatio:false,
@@ -373,7 +424,7 @@ function renderHBar(id, cats, vals, useCatColors=true) {
   const ctx = document.getElementById(id)?.getContext('2d'); if(!ctx) return;
   const total = vals.reduce((a,b)=>a+b,0)||1;
   const colors = useCatColors
-    ? cats.map(c=>CAT_COLORS[c]||PRIMARY)
+    ? cats.map((c,i)=>CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length])
     : cats.map((_,i)=>THEME_PALETTE[i % THEME_PALETTE.length]);
   const wrappedLabels = cats.map(c => wrapLabel(c, 32));
   const maxVal = Math.max(...vals, 1);
@@ -431,7 +482,7 @@ function renderGroupedHBar(id, labels, datasets) {
 function legHtml(cats, vals, useCatColors=true) {
   const tot = vals.reduce((a,b)=>a+b,0)||1;
   return '<div class="legend">'+cats.map((c,i)=>{
-    const color = useCatColors ? (CAT_COLORS[c]||PRIMARY) : THEME_PALETTE[i % THEME_PALETTE.length];
+    const color = useCatColors ? (CAT_COLORS[c]||THEME_PALETTE[i%THEME_PALETTE.length]) : THEME_PALETTE[i % THEME_PALETTE.length];
     return `<div class="leg-item"><div class="leg-swatch" style="background:${color}"></div>
       <strong>${c}</strong>:&nbsp;(${Math.round(vals[i]/tot*100)}%)</div>`;
   }).join('')+'</div>';
@@ -544,9 +595,9 @@ function cardTimeStat(q) {
     <div class="card-q">${q.title}</div>
     <div class="card-meta">Promedios reportados</div>
     <div class="numeric-grid">
-      <div class="num-block"><div class="num-label">Años</div><div class="num-big">${fmtNum(a.avg)}</div><div class="num-unit">prom. (n=${a.n})</div><div class="num-detail">min ${fmtNum(a.min)} · max ${fmtNum(a.max)}</div></div>
-      <div class="num-block"><div class="num-label">Meses</div><div class="num-big">${fmtNum(m.avg)}</div><div class="num-unit">prom. (n=${m.n})</div><div class="num-detail">min ${fmtNum(m.min)} · max ${fmtNum(m.max)}</div></div>
-      <div class="num-block"><div class="num-label">Sesiones</div><div class="num-big">${fmtNum(s.avg)}</div><div class="num-unit">prom. (n=${s.n})</div><div class="num-detail">min ${fmtNum(s.min)} · max ${fmtNum(s.max)}</div></div>
+      <div class="num-block"><div class="num-label">Años</div><div class="num-big">${fmtNum(a.avg)}</div><div class="num-unit">prom.</div><div class="num-detail">min ${fmtNum(a.min)} · max ${fmtNum(a.max)}</div></div>
+      <div class="num-block"><div class="num-label">Meses</div><div class="num-big">${fmtNum(m.avg)}</div><div class="num-unit">prom.</div><div class="num-detail">min ${fmtNum(m.min)} · max ${fmtNum(m.max)}</div></div>
+      <div class="num-block"><div class="num-label">Sesiones</div><div class="num-big">${fmtNum(s.avg)}</div><div class="num-unit">prom.</div><div class="num-detail">min ${fmtNum(s.min)} · max ${fmtNum(s.max)}</div></div>
     </div>
   </div>`;
 }
@@ -558,11 +609,11 @@ function cardCoverage(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">Datos agregados de ${Math.max(a.n,m.n,c.n)} programas</div>
+    <div class="card-meta">Datos agregados</div>
     <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
-      <div class="cov-row"><span class="cov-label">N° familias atendidas (total)</span><span class="cov-stat">${fmtNum(a.total)}<small>(n=${a.n})</small></span></div>
-      <div class="cov-row"><span class="cov-label">N° familias meta (total)</span><span class="cov-stat">${fmtNum(m.total)}<small>(n=${m.n})</small></span></div>
-      <div class="cov-row"><span class="cov-label">% Cobertura promedio</span><span class="cov-stat">${pctAvg}%<small>(n=${c.n})</small></span></div>
+      <div class="cov-row"><span class="cov-label">N° familias atendidas (total)</span><span class="cov-stat">${fmtNum(a.total)}</span></div>
+      <div class="cov-row"><span class="cov-label">N° familias meta (total)</span><span class="cov-stat">${fmtNum(m.total)}</span></div>
+      <div class="cov-row"><span class="cov-label">% Cobertura promedio</span><span class="cov-stat">${pctAvg}%</span></div>
       <div class="cov-row"><span class="cov-label">Atendidas — promedio por programa</span><span class="cov-stat">${fmtNum(a.avg)}<small>min ${fmtNum(a.min)} · max ${fmtNum(a.max)}</small></span></div>
     </div>
   </div>`;
@@ -574,11 +625,11 @@ function cardPersonnel(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">Totales agregados · ${Math.max(v.n,m.n,t.n)} programas que reportan</div>
+    <div class="card-meta">Totales agregados</div>
     <div class="pers-grid">
-      <div class="pers-block pers-v"><div class="pers-label">Varones</div><div class="pers-num">${fmtNum(v.total)}</div><div class="pers-detail">prom. ${fmtNum(v.avg)} (n=${v.n})</div></div>
-      <div class="pers-block pers-m"><div class="pers-label">Mujeres</div><div class="pers-num">${fmtNum(m.total)}</div><div class="pers-detail">prom. ${fmtNum(m.avg)} (n=${m.n})</div></div>
-      <div class="pers-block pers-t"><div class="pers-label">Total</div><div class="pers-num">${fmtNum(t.total)}</div><div class="pers-detail">prom. ${fmtNum(t.avg)} (n=${t.n})</div></div>
+      <div class="pers-block pers-v"><div class="pers-label">Varones</div><div class="pers-num">${fmtNum(v.total)}</div><div class="pers-detail">prom. ${fmtNum(v.avg)}</div></div>
+      <div class="pers-block pers-m"><div class="pers-label">Mujeres</div><div class="pers-num">${fmtNum(m.total)}</div><div class="pers-detail">prom. ${fmtNum(m.avg)}</div></div>
+      <div class="pers-block pers-t"><div class="pers-label">Total</div><div class="pers-num">${fmtNum(t.total)}</div><div class="pers-detail">prom. ${fmtNum(t.avg)}</div></div>
     </div>
   </div>`;
 }
@@ -603,7 +654,7 @@ function cardTagList(q) {
   return `<div class="card">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">${q.items.length} respuestas registradas</div>
+
     <div class="tag-list">${tags}</div>
   </div>`;
 }
@@ -622,7 +673,7 @@ function cardMatrix(q) {
   return `<div class="card span_full">
     <div class="card-num">Preg. ${q.num}</div>
     <div class="card-q">${q.title}</div>
-    <div class="card-meta">${q.items.length} criterios evaluados · respuestas SI / NO</div>
+    <div class="card-meta">criterios evaluados · respuestas SI / NO</div>
     <div class="chart-area" style="height:${hpx}px"><canvas id="${id}"></canvas></div>
   </div>`;
 }
@@ -649,7 +700,7 @@ D.summary.forEach(s => {
   sumRow.innerHTML += `<div class="sum-card">
     <div class="sum-pct">${s.pct}<sub>%</sub></div>
     <div class="sum-q">${s.q}</div>
-    <div class="sum-n">Preg. ${s.num} · n=${s.n}</div>
+    <div class="sum-n">Preg. ${s.num}</div>
   </div>`;
 });
 

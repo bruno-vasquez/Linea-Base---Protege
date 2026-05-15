@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 <style>
 
 :root{
-  --P:#154360;--S:#2471A3;--A:#F5A623;
+  --P:#1B7B35;--S:#158030;--A:#C41E1E;
   --bg:#F8F7F4;--card:#FFFFFF;--border:#E4E1DB;--text:#1A1916;--muted:#706D67;
   --unicef:#1CABE2;
 }
@@ -36,7 +36,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);fon
 .breadcrumb .current{color:var(--text);font-weight:500}
 
 /* HERO */
-.hero{background:linear-gradient(135deg,#0B2E47 0%,#154360 55%,#1A6090 100%);color:#fff;padding:64px 60px 60px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#0A4520 0%,#1B7B35 55%,#249B48 100%);color:#fff;padding:64px 60px 60px;position:relative;overflow:hidden}
 .hero-deco{position:absolute;border-radius:50%;border:50px solid rgba(255,255,255,0.05);pointer-events:none}
 .hero-deco.d1{width:420px;height:420px;top:-110px;right:-90px}
 .hero-deco.d2{width:280px;height:280px;bottom:-80px;left:38%}
@@ -115,7 +115,18 @@ footer strong{color:var(--P)}
 .instr-cta-arrow{display:inline-flex;width:16px;height:16px;transition:transform .2s}
 .instr-cta-arrow svg{width:100%;height:100%}
 .instr-card.disp:hover .instr-cta-arrow{transform:translateX(4px)}
-</style>
+
+/* ── UNICEF PROFESSIONAL ENHANCEMENTS ───────────────────────────── */
+html{scroll-behavior:smooth}
+body{background:linear-gradient(175deg,#EBF3F9 0%,#F8F7F4 320px)}
+.site-header{border-top:3px solid #1CABE2;padding-top:9px;box-shadow:0 2px 16px rgba(0,0,0,.07)}
+.hero-pill{background:rgba(28,171,226,.25);border-color:rgba(28,171,226,.5)}
+.hero h1,.hero-sub{text-shadow:0 2px 16px rgba(0,0,0,.18)}
+.instr-card.disp:hover{box-shadow:0 16px 48px rgba(0,0,0,.14)}
+.instr-cta{background:linear-gradient(90deg,var(--P),#1A5A88)}
+footer{background:linear-gradient(135deg,#0B2E47,#154360);color:rgba(255,255,255,.62);border-top:none;margin-top:48px}
+footer strong{color:#1CABE2}
+/* ──────────────────────────────────────────────────────────────── */</style>
 </head>
 <body>
 
@@ -163,10 +174,9 @@ footer strong{color:var(--P)}
 </svg></div>
   <div class="hero-flag-wrap">
     <div class="hero-flag"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-  <rect width="60" height="40" fill="#5D7D2E"/>
-  <polygon points="0,0 0,40 30,20" fill="#C8102E"/>
-  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/>
-</svg></div>
+  <rect width="60" height="40" fill="#1B7B35"/>
+  <polygon points="0,0 0,40 30,20" fill="#C41E1E"/>
+  <rect width="60" height="40" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/></svg></div>
     <div class="hero-flag-lbl">Bandera oficial</div>
   </div>
   <div class="hero-content">
@@ -175,7 +185,7 @@ footer strong{color:var(--P)}
     <div class="hero-sub">Sistema de Protección de la Niñez y Adolescencia</div>
     <div class="hero-pills">
       <span class="hero-pill">2 de 4 instrumentos disponibles</span>
-      <span class="hero-pill">12 respondentes registrados</span>
+      <span class="hero-pill">22 Encuestados registrados</span>
     </div>
   </div>
 </div>
@@ -201,7 +211,7 @@ footer strong{color:var(--P)}
             <h3 class="instr-name">Instrumento Pilar 1a</h3>
             <div class="instr-subtitle">Organizaciones Comunitarias</div>
             <div class="instr-desc">Diagnóstico desde organizaciones y líderes comunitarios</div>
-            <div class="instr-stat"><span class="instr-stat-num">5</span> respondentes</div>
+            <div class="instr-stat"><span class="instr-stat-num">8</span> Encuestados</div>
           </div>
           <div class="instr-cta">Ver reporte completo<span class="instr-cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
         </a>
@@ -219,7 +229,7 @@ footer strong{color:var(--P)}
             <h3 class="instr-name">Instrumento Pilar 1b</h3>
             <div class="instr-subtitle">Organizaciones Gubernamentales</div>
             <div class="instr-desc">Diagnóstico desde DNAs, SLIMs y otras instancias gubernamentales</div>
-            <div class="instr-stat"><span class="instr-stat-num">7</span> respondentes</div>
+            <div class="instr-stat"><span class="instr-stat-num">7</span> Encuestados</div>
           </div>
           <div class="instr-cta">Ver reporte completo<span class="instr-cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
         </a>
