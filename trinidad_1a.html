@@ -278,7 +278,6 @@ body{background:linear-gradient(175deg,#EBF3F9 0%,#F8F7F4 320px)}
     <h1>Trinidad</h1>
     <div class="hero-instrument">Estado de Situación – ONGs y Organizaciones Comunitarias</div>
     <div class="hero-pills">
-      <span class="hero-pill">n = 2 Encuestados</span>
       <span class="hero-pill">Organizaciones Comunitarias</span>
       <span class="hero-pill">58 preguntas · 5 secciones</span>
     </div>
@@ -401,7 +400,7 @@ function renderDoughnut(id, cats, vals) {
   }, options:{
     cutout:'62%', responsive:true, maintainAspectRatio:false,
     plugins:{ legend:{display:false},
-      tooltip:{callbacks:{label:c=>` ${c.label}: ${c.raw} (${Math.round(c.raw/c.dataset.data.reduce((a,b)=>a+b,0)*100)}%)`}}
+      tooltip:{callbacks:{label:c=>` ${c.label}: ${Math.round(c.raw/c.dataset.data.reduce((a,b)=>a+b,0)*100)}%`}}
     }
   }});
 }
@@ -415,7 +414,7 @@ function renderPie(id, cats, vals) {
   }, options:{
     responsive:true, maintainAspectRatio:false,
     plugins:{ legend:{display:false},
-      tooltip:{callbacks:{label:c=>` ${c.label}: ${c.raw} (${Math.round(c.raw/c.dataset.data.reduce((a,b)=>a+b,0)*100)}%)`}}
+      tooltip:{callbacks:{label:c=>` ${c.label}: ${Math.round(c.raw/c.dataset.data.reduce((a,b)=>a+b,0)*100)}%`}}
     }
   }});
 }
@@ -438,11 +437,11 @@ function renderHBar(id, cats, vals, useCatColors=true) {
     indexAxis:'y', responsive:true, maintainAspectRatio:false,
     layout: { padding: { right: 36 } },
     plugins:{ legend:{display:false},
-      tooltip:{callbacks:{label:c=>` ${c.raw} resp. (${Math.round(c.raw/total*100)}%)`}}
+      tooltip:{callbacks:{label:c=>` ${Math.round(c.raw/total*100)}%`}}
     },
     scales:{
       x:{beginAtZero:true, suggestedMax: maxVal + Math.max(1, Math.ceil(maxVal*0.08)),
-          ticks:{stepSize:1,font:{...defaultFont,size:11},color:'#888'},
+          ticks:{display:false},
           grid:{color:'rgba(0,0,0,0.04)'}},
       y:{grid:{display:false},
           ticks:{font:{...defaultFont,size:12.5,weight:'500'},color:'#2C2A26',autoSkip:false}}
@@ -467,11 +466,11 @@ function renderGroupedHBar(id, labels, datasets) {
       legend:{display:true, position:'bottom',
                labels:{font:{...defaultFont,size:12}, boxWidth:14, padding:16,
                        usePointStyle:false}},
-      tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.raw}`}}
+      tooltip:{callbacks:{label:c=>{ const total = c.chart.data.datasets.reduce((a,d)=>a+(d.data[c.dataIndex]||0),0)||1; return ` ${c.dataset.label}: ${Math.round(c.raw/total*100)}%`; }}}
     },
     scales:{
       x:{beginAtZero:true, suggestedMax: maxVal + Math.max(1, Math.ceil(maxVal*0.08)),
-          ticks:{stepSize:1,font:{...defaultFont,size:11},color:'#888'},
+          ticks:{display:false},
           grid:{color:'rgba(0,0,0,0.04)'}},
       y:{grid:{display:false},
           ticks:{font:{...defaultFont,size:12.5,weight:'500'},color:'#2C2A26',autoSkip:false}}

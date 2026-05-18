@@ -4,7 +4,10 @@
       "Bash(python3 *)",
       "Bash(grep -n \"n=\\\\${\\\\\\\\|\\(n=\\\\\\\\|programas\\\\|reportan\\\\|card-meta\\\\|num-unit\\\\|cov-stat\\\\|pers-detail\")",
       "Bash(grep -n \"n=\\\\${\\\\\\\\|\\(n=\\\\\\\\|\\\\.n}\\\\\\\\|card-meta\\\\\\\\|card-q\\\\\\\\|respondentes\")",
-      "Bash(grep -n \"summaryRow\\\\|summary\\\\|indicador\\\\|n=\\\\${\" \"C:/Users/Bruno/Desktop/Reporte_ElAlto_Trinidad/el_alto_1a.html\")"
+      "Bash(grep -n \"summaryRow\\\\|summary\\\\|indicador\\\\|n=\\\\${\" \"C:/Users/Bruno/Desktop/Reporte_ElAlto_Trinidad/el_alto_1a.html\")",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Bruno\\\\Desktop\\\\Reporte_ElAlto_Trinidad\" | Where-Object { $_.Extension -in @\\('.html', '.png', '.jpg'\\) } | Select-Object Name, Length | Sort-Object Name)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Bruno\\\\Desktop\\\\Reporte_ElAlto_Trinidad\" -Recurse -Force | Select-Object -ExpandProperty FullName | ForEach-Object { $_ -replace [regex]::Escape\\(\"C:\\\\Users\\\\Bruno\\\\Desktop\\\\Reporte_ElAlto_Trinidad\"\\), \".\" } | Select-Object -First 150)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Bruno\\\\Desktop\\\\Reporte_ElAlto_Trinidad\" -File | Where-Object { $_.Extension -in @\\('.html', '.png', '.jpg', '.md'\\) } | Select-Object Name)"
     ]
   }
 }
