@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python fix_group_charts.py)",
+      "Bash(python -c ' *)",
+      "Bash(del fix_group_charts.py)"
+    ]
+  }
+}
