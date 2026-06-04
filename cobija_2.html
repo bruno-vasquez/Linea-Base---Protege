@@ -221,7 +221,40 @@ body{background:linear-gradient(175deg,#EBF3F9 0%,#F8F7F4 320px)}
 .footer{background:linear-gradient(135deg,#0B2E47,#154360);color:rgba(255,255,255,.62);border-top:none;margin-top:64px}
 .footer strong{color:#1CABE2}
 .footer .foot-brand svg{opacity:.85}
-/* ──────────────────────────────────────────────────────────────── */</style>
+/* ──────────────────────────────────────────────────────────────── */
+/* ── Expand ────────────────────────────────────────────────────────── */
+.card{position:relative !important}
+.xbtn{
+  position:absolute;top:8px;right:8px;width:30px;height:30px;
+  background:rgba(255,255,255,.92);border:1.5px solid #ccc;
+  border-radius:7px;cursor:pointer;display:flex;align-items:center;
+  justify-content:center;z-index:10;padding:5px;
+  box-shadow:0 1px 5px rgba(0,0,0,.15);
+  transition:background .14s,transform .12s
+}
+.xbtn svg{width:13px;height:13px;color:#555;display:block;pointer-events:none}
+.xbtn:hover{background:#fff;border-color:#888;transform:scale(1.1)}
+#xModal{display:none;position:fixed;inset:0;z-index:10000;
+  background:rgba(0,0,0,.76);align-items:center;justify-content:center;padding:18px}
+#xModal.on{display:flex}
+.xbox{background:#fff;border-radius:16px;padding:30px 36px 26px;max-width:92vw;
+  max-height:92vh;overflow-y:auto;position:relative;min-width:320px;
+  box-shadow:0 24px 80px rgba(0,0,0,.4)}
+.xcls{position:absolute;top:12px;right:16px;background:none;border:none;
+  font-size:26px;line-height:1;cursor:pointer;color:#bbb}
+.xcls:hover{color:#333}
+.xnum{font-size:10px;font-weight:700;letter-spacing:2px;color:#aaa;
+  text-transform:uppercase;margin-bottom:4px}
+.xq{font-size:16px;font-weight:600;color:#1A1916;margin-bottom:20px;
+  max-width:720px;line-height:1.45}
+#xcnt{display:flex;align-items:flex-start;justify-content:center;
+  flex-wrap:wrap;gap:14px;min-height:180px}
+#xcnt img{max-width:100%;max-height:72vh;object-fit:contain;border-radius:6px}
+#xcnt .xclone{width:100%;max-width:860px}
+#xcnt .xclone .card-num,#xcnt .xclone .card-q,
+#xcnt .xclone .xbtn{display:none !important}
+/* ─────────────────────────────────────────────────────────────────── */
+</style>
 </head>
 <body>
 
@@ -780,6 +813,63 @@ window.addEventListener('scroll', () => {
   allSecs().forEach((s,i) => { if(s.getBoundingClientRect().top < 130) cur=i; });
   allBtns().forEach((b,i) => b.classList.toggle('active', i===cur));
 }, {passive:true});
+
+/* ── Expand modal ──────────────────────────────────────────────────── */
+(function(){
+  if(document.getElementById('xModal'))return;
+  var ICO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>';
+  var el=document.createElement('div');
+  el.id='xModal';
+  el.innerHTML='<div class="xbox" onclick="event.stopPropagation()"><button class="xcls" onclick="xClose()">×</button><div class="xnum" id="xNum"></div><div class="xq" id="xQ"></div><div id="xcnt"></div></div>';
+  el.addEventListener('click',xClose);
+  document.body.appendChild(el);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')xClose();});
+  window.xClose=function(){
+    document.getElementById('xModal').classList.remove('on');
+    document.getElementById('xcnt').innerHTML='';
+  };
+  window.xOpen=function(card){
+    document.getElementById('xNum').textContent=(card.querySelector('.card-num')||{}).textContent||'';
+    document.getElementById('xQ').textContent=(card.querySelector('.card-q')||{}).textContent||'';
+    var cnt=document.getElementById('xcnt');
+    cnt.innerHTML='';
+    var cvs=Array.from(card.querySelectorAll('canvas'));
+    if(cvs.length){
+      cvs.forEach(function(cv){
+        try{
+          var ch=Chart.getChart(cv);
+          if(!ch)return;
+          var img=new Image();
+          img.src=ch.toBase64Image('image/png',1);
+          img.style.cssText='max-width:100%;max-height:72vh;border-radius:6px';
+          cnt.appendChild(img);
+        }catch(e){}
+      });
+    } else {
+      var cl=card.cloneNode(true);
+      cl.className='xclone';
+      cl.style.cssText='font-size:14px;padding:0;border:none;box-shadow:none;background:transparent';
+      cnt.appendChild(cl);
+    }
+    document.getElementById('xModal').classList.add('on');
+  };
+  function addBtns(){
+    document.querySelectorAll('.card').forEach(function(card){
+      if(card.querySelector('.xbtn'))return;
+      var b=document.createElement('button');
+      b.className='xbtn'; b.title='Ver ampliado'; b.innerHTML=ICO;
+      b.addEventListener('click',function(e){e.stopPropagation();xOpen(card);});
+      card.appendChild(b);
+    });
+  }
+  // Ejecutar varias veces para capturar tarjetas dinámicas
+  addBtns();
+  setTimeout(addBtns,300);
+  setTimeout(addBtns,800);
+  setTimeout(addBtns,1500);
+  setInterval(addBtns,4000);
+})();
+/* ─────────────────────────────────────────────────────────────────── */
 </script>
 </body>
 </html>
