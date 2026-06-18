@@ -126,7 +126,22 @@ body{background:linear-gradient(175deg,#EBF3F9 0%,#F8F7F4 320px)}
 .instr-cta{background:linear-gradient(90deg,var(--P),#1A5A88)}
 footer{background:linear-gradient(135deg,#0B2E47,#154360);color:rgba(255,255,255,.62);border-top:none;margin-top:48px}
 footer strong{color:#1CABE2}
-/* ──────────────────────────────────────────────────────────────── */</style>
+/* ──────────────────────────────────────────────────────────────── */
+/* === Vista por Pilares === */
+.view-toggle{display:flex;gap:0;margin-bottom:26px;background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;max-width:360px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.vtab{flex:1;border:none;background:transparent;color:var(--muted);padding:11px 18px;font-family:inherit;font-size:12.5px;font-weight:700;cursor:pointer;transition:background .18s,color .18s;letter-spacing:.3px}
+.vtab.active{background:var(--P);color:#fff}
+.vtab:hover:not(.active){background:rgba(0,0,0,.04);color:var(--text)}
+.pilar-grid{max-width:1400px;display:flex;flex-direction:column;gap:22px}
+.pilar-group{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.05)}
+.pilar-hdr-bar{padding:14px 22px;display:flex;align-items:center;gap:14px}
+.pilar-hdr-num{font-family:'Fraunces',serif;font-size:36px;font-weight:900;line-height:1;min-width:44px;color:#fff}
+.pilar-hdr-info{display:flex;flex-direction:column;gap:2px}
+.pilar-hdr-label{font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;opacity:.72;font-weight:700;color:#fff}
+.pilar-hdr-name{font-size:14px;font-weight:700;line-height:1.2;color:#fff}
+.pilar-sub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;padding:18px 22px}
+.pilar-pend{padding:18px 22px;color:var(--muted);font-size:12.5px;font-style:italic}
+</style>
 </head>
 <body>
 
@@ -194,7 +209,12 @@ footer strong{color:#1CABE2}
   <h2 class="sec-title">Instrumentos</h2>
   <div class="sec-help">El diagnóstico aplica cuatro instrumentos complementarios. A continuación se listan los que ya cuentan con reporte generado y los que están pendientes de aplicación o procesamiento.</div>
 
-  <div class="instr-grid">
+
+  <div class="view-toggle">
+    <button class="vtab active" data-vtab="inst" onclick="switchView('inst')">Por Instrumento</button>
+    <button class="vtab" data-vtab="pilar" onclick="switchView('pilar')">Por Pilar</button>
+  </div>
+  <div class="instr-grid" id="grid-inst">
 
         <a href="el_alto_1a.html" class="instr-card disp" style="--IC-bg:rgba(231,126,34,0.10);--IC-fg:#D35400;--IC-border:rgba(231,126,34,0.28)">
           <div class="instr-icon-area">
@@ -268,6 +288,123 @@ footer strong{color:#1CABE2}
           
         </div>
   </div>
+
+  <div class="pilar-grid" id="grid-pilar" style="display:none">
+  <div class="pilar-group">
+    <div class="pilar-hdr-bar" style="background:linear-gradient(90deg,#17365D,#1CABE2)">
+      <div class="pilar-hdr-num">1</div>
+      <div class="pilar-hdr-info">
+        <span class="pilar-hdr-label">Pilar</span>
+        <span class="pilar-hdr-name">Existencia, Cobertura, Contenidos y Recursos</span>
+      </div>
+    </div>
+    <div class="pilar-sub-grid">
+        <a href="el_alto_1a.html?pilar=1" class="instr-card disp" style="--IC-bg:rgba(231,126,34,0.10);--IC-fg:#D35400;--IC-border:rgba(231,126,34,0.28)">
+          <div class="instr-icon-area">
+            <div class="instr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1.5c0-2.5 2-4.5 4.5-4.5h3c2.5 0 4.5 2 4.5 4.5V20"/><path d="M14 18v-1c0-2 1.5-3.5 3.5-3.5h0c2 0 3.5 1.5 3.5 3.5v1"/></svg></div>
+            <div class="instr-id">1a</div>
+          </div>
+          <div class="instr-head"><span class="badge badge-ok"><span class="badge-dot"></span>Disponible</span></div>
+          <div class="instr-body">
+            <h3 class="instr-name">Instrumento 1a</h3>
+            <div class="instr-subtitle">Organizaciones Comunitarias</div>
+            <div class="instr-desc">Existencia, Cobertura, Contenidos y Recursos</div>
+          </div>
+          <div class="instr-cta">Ver Pilar 1 <span class="instr-cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </a>        <a href="el_alto_1b.html?pilar=1" class="instr-card disp" style="--IC-bg:rgba(28,171,226,0.10);--IC-fg:#1581A8;--IC-border:rgba(28,171,226,0.30)">
+          <div class="instr-icon-area">
+            <div class="instr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/><path d="M5 10h14"/><circle cx="12" cy="13" r="0.8" fill="currentColor"/></svg></div>
+            <div class="instr-id">1b</div>
+          </div>
+          <div class="instr-head"><span class="badge badge-ok"><span class="badge-dot"></span>Disponible</span></div>
+          <div class="instr-body">
+            <h3 class="instr-name">Instrumento 1b</h3>
+            <div class="instr-subtitle">Organizaciones Gubernamentales</div>
+            <div class="instr-desc">Existencia, Cobertura, Contenidos y Recursos</div>
+          </div>
+          <div class="instr-cta">Ver Pilar 1 <span class="instr-cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </a>    </div>
+  </div>
+  <div class="pilar-group">
+    <div class="pilar-hdr-bar" style="background:linear-gradient(90deg,#B71C6B,#E91E63)">
+      <div class="pilar-hdr-num">2</div>
+      <div class="pilar-hdr-info">
+        <span class="pilar-hdr-label">Pilar</span>
+        <span class="pilar-hdr-name">Programas Comunitarios</span>
+      </div>
+    </div>
+    <div class="pilar-sub-grid">
+<div class="instr-card pend" style="--IC-bg:rgba(0,0,0,.04);--IC-fg:#999;--IC-border:rgba(0,0,0,.10)">
+  <div class="instr-icon-area">
+    <div class="instr-icon"></div>
+    <div class="instr-id" style="color:var(--muted)">—</div>
+  </div>
+  <div class="instr-head"><span class="badge badge-soon">Próximamente</span></div>
+  <div class="instr-body">
+    <h3 class="instr-name" style="color:var(--muted)">Pendiente</h3>
+    <div class="instr-desc">No aplicado en este municipio</div>
+    <div class="instr-stat instr-stat-pend">Pendiente de aplicación</div>
+  </div>
+</div>    </div>
+  </div>
+  <div class="pilar-group">
+    <div class="pilar-hdr-bar" style="background:linear-gradient(90deg,#155724,#27AE60)">
+      <div class="pilar-hdr-num">3</div>
+      <div class="pilar-hdr-info">
+        <span class="pilar-hdr-label">Pilar</span>
+        <span class="pilar-hdr-name">Defensorías de la Niñez</span>
+      </div>
+    </div>
+    <div class="pilar-sub-grid">
+<div class="instr-card pend" style="--IC-bg:rgba(0,0,0,.04);--IC-fg:#999;--IC-border:rgba(0,0,0,.10)">
+  <div class="instr-icon-area">
+    <div class="instr-icon"></div>
+    <div class="instr-id" style="color:var(--muted)">—</div>
+  </div>
+  <div class="instr-head"><span class="badge badge-soon">Próximamente</span></div>
+  <div class="instr-body">
+    <h3 class="instr-name" style="color:var(--muted)">Pendiente</h3>
+    <div class="instr-desc">No aplicado en este municipio</div>
+    <div class="instr-stat instr-stat-pend">Pendiente de aplicación</div>
+  </div>
+</div>    </div>
+  </div>
+  <div class="pilar-group">
+    <div class="pilar-hdr-bar" style="background:linear-gradient(90deg,#6A1B9A,#9C27B0)">
+      <div class="pilar-hdr-num">4</div>
+      <div class="pilar-hdr-info">
+        <span class="pilar-hdr-label">Pilar</span>
+        <span class="pilar-hdr-name">Redes Interinstitucionales</span>
+      </div>
+    </div>
+    <div class="pilar-sub-grid">
+        <a href="el_alto_1a.html?pilar=4" class="instr-card disp" style="--IC-bg:rgba(231,126,34,0.10);--IC-fg:#D35400;--IC-border:rgba(231,126,34,0.28)">
+          <div class="instr-icon-area">
+            <div class="instr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1.5c0-2.5 2-4.5 4.5-4.5h3c2.5 0 4.5 2 4.5 4.5V20"/><path d="M14 18v-1c0-2 1.5-3.5 3.5-3.5h0c2 0 3.5 1.5 3.5 3.5v1"/></svg></div>
+            <div class="instr-id">1a</div>
+          </div>
+          <div class="instr-head"><span class="badge badge-ok"><span class="badge-dot"></span>Disponible</span></div>
+          <div class="instr-body">
+            <h3 class="instr-name">Instrumento 1a</h3>
+            <div class="instr-subtitle">Organizaciones Comunitarias</div>
+            <div class="instr-desc">Redes Interinstitucionales · Sección V</div>
+          </div>
+          <div class="instr-cta">Ver Pilar 4 <span class="instr-cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </a>        <a href="el_alto_1b.html?pilar=4" class="instr-card disp" style="--IC-bg:rgba(28,171,226,0.10);--IC-fg:#1581A8;--IC-border:rgba(28,171,226,0.30)">
+          <div class="instr-icon-area">
+            <div class="instr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/><path d="M5 10h14"/><circle cx="12" cy="13" r="0.8" fill="currentColor"/></svg></div>
+            <div class="instr-id">1b</div>
+          </div>
+          <div class="instr-head"><span class="badge badge-ok"><span class="badge-dot"></span>Disponible</span></div>
+          <div class="instr-body">
+            <h3 class="instr-name">Instrumento 1b</h3>
+            <div class="instr-subtitle">Organizaciones Gubernamentales</div>
+            <div class="instr-desc">Redes Interinstitucionales · Sección V</div>
+          </div>
+          <div class="instr-cta">Ver Pilar 4 <span class="instr-cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+        </a>    </div>
+  </div>
+  </div>
 </main>
 
 
@@ -292,5 +429,15 @@ footer strong{color:#1CABE2}
   <div class="foot-meta"><strong>UNICEF Bolivia</strong> · PROTEGE · Línea Base · 2026</div>
 </footer>
 
+<script>
+function switchView(v){
+  document.getElementById('grid-inst').style.display=v==='inst'?'':'none';
+  document.getElementById('grid-pilar').style.display=v==='pilar'?'':'none';
+  document.querySelectorAll('.vtab').forEach(function(t){t.classList.toggle('active',t.dataset.vtab===v)});
+  try{localStorage.setItem('protege-view',v)}catch(e){}
+}
+(function(){try{var sv=localStorage.getItem('protege-view');if(sv)switchView(sv)}catch(e){}})();
+</script>
 </body>
 </html>
+

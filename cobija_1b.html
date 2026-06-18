@@ -839,7 +839,40 @@ window.addEventListener('scroll', () => {
 })();
 /* ─────────────────────────────────────────────────────────────────── */
 </script>
+
+<script>
+/* Pilar filter — activated via ?pilar=1 or ?pilar=4 in URL */
+(function(){
+  var p = (new URLSearchParams(location.search)).get('pilar');
+  if (!p) return;
+  var REDES = 4; // Section V "REDES INTERINSTITUCIONALES" is always index 4
+  function applyFilter() {
+    var secs = document.querySelectorAll('#mainContent .section');
+    if (secs.length < 5) return false;
+    secs.forEach(function(sec, i) {
+      sec.style.display = (p === '1' ? i < REDES : i === REDES) ? '' : 'none';
+    });
+    var navBtns = document.querySelectorAll('.nav-btn');
+    navBtns.forEach(function(btn, i) {
+      btn.style.display = (p === '1' ? i < REDES : i === REDES) ? '' : 'none';
+    });
+    var cur = document.querySelector('.breadcrumb .current');
+    if (cur && cur.textContent.indexOf('Pilar') < 0) {
+      cur.textContent = 'Pilar ' + p + ' · ' + cur.textContent;
+    }
+    var eyebrow = document.querySelector('.hero-eyebrow');
+    if (eyebrow && eyebrow.textContent.indexOf('Pilar') < 0) {
+      eyebrow.textContent = 'PROTEGE · Pilar ' + p + ' · ' + eyebrow.textContent;
+    }
+    return true;
+  }
+  if (!applyFilter()) {
+    [50, 200, 600, 1200].forEach(function(t) { setTimeout(applyFilter, t); });
+  }
+})();
+</script>
 </body>
 </html>
+
 
 
